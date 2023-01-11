@@ -5,7 +5,7 @@ import kai from '../kai.PNG'
 const Projects = () => {
 
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
     <h1>Projects</h1>
 
     <div className="project-container">

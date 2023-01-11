@@ -6,37 +6,37 @@ const Header = () => {
         <h1 className="logo"><a href="google.com">VM</a></h1>
         <ul className="navbar">
             <li>
-                <a href="google.com">
+                <a href="#hero-section">
                 Home
                 </a>
             </li>
 
             <li>
-                <a href="google.com">
+                <a href="#about">
                 About
                 </a>
             </li>
 
             <li>
-                <a href="google.com">
+                <a href="#experience">
                 Experience
                 </a>
             </li>
 
             <li>
-             <a href="google.com">
+             <a href="#projects">
                 Projects
                 </a>
             </li>
 
             <li>
-                <a href="google.com">
+                <a href="#skills">
                 Skils
                 </a>
             </li>
 
             <li>
-                <a href="google.com">
+                <a href="#contact">
                 Contact
                 </a>
             </li>

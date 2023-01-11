@@ -6,11 +6,11 @@ const About = () => {
 
 
   return (
-    <div className="about">
+    <div className="about" id="about">
       <h1>About me</h1>
 
       <div className="about-info">
-        <img src={photo} className="about-photo" />
+        <img src={photo} className="about-photo" alt="My portfolio" />
 
         <ul className="about-info-text">
           <li>Name: Vince Baron Mangahis</li>

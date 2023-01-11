@@ -28,7 +28,7 @@ const Skills = () => {
 
 
   return (
-    <div className='skills'>
+    <div className='skills' id="skills">
       <h1>Skills</h1>
 
       <SkillBar skills = {skills} colors={colors} />

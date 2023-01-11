@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h1>Contact</h1>
       <form className="contact-form" method="POST" action="https://reqres.in/api/users">
         
