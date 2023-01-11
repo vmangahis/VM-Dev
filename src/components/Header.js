@@ -31,7 +31,7 @@ const Header = () => {
 
             <li>
                 <a href="#skills">
-                Skils
+                Skills
                 </a>
             </li>
 
