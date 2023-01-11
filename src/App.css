@@ -6,6 +6,10 @@
   line-height: 50px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a{
   text-decoration: none;
   color:white;
@@ -232,6 +236,8 @@ header a {
   background-color: #70848e;
   transition: .5s;
 }
+
+
 
 @media(max-width:1385px){
   .about-info{
