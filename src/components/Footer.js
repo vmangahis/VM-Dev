@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { IconContext } from "react-icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -36,6 +39,21 @@ const Footer = () => {
                     </li>
                 </ul>
         </nav>
+
+        <div className="sites">
+        <IconContext.Provider value={{ size: "3em"}}>
+            <a href="https://github.com/vmangahis">
+                <FaGithub />
+            </a>
+            
+            <a href="https://www.linkedin.com/in/vince-baron-mangahis-467b50221/">
+                <FaLinkedin />
+            </a>
+        </IconContext.Provider>
+        </div>
+
+        <p className="copyright">&copy; 2023 VMangahis</p>
+
     </footer>
   )
 }

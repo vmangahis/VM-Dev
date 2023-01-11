@@ -1,7 +1,7 @@
 *{
   border:0;
   margin:0;
-  
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   line-height: 50px;
 }
@@ -78,6 +78,7 @@ header a {
 
 .banner-text{
   color:white;
+  text-align: center;
 }
 
 .contact-button{
@@ -102,6 +103,15 @@ header a {
   margin-right: auto;
   margin-top:100px;
   color:white;
+  
+  
+}
+
+.experience, .projects, .skills, .contact{
+  padding-top:50px;
+  border-top:2px;
+  border-style: solid;
+  border-color: #6B6969;
 }
 
 .footer{
@@ -112,6 +122,7 @@ header a {
 }
 
 .about > h1, .experience > h1, .projects > h1,.skills > h1, .contact > h1{
+  
   margin-bottom:20px;
 }
 
@@ -245,14 +256,17 @@ header a {
 }
 
 .footer{
-  border-top:2px;
-  border-bottom:2px;
-  border-style: solid;
-  border-color:#6B6969;
   width:75%;
   display:block;
   margin-left:auto;
   margin-right:auto;
+}
+
+.footer-nav{
+  border-top:2px;
+  border-bottom:2px;
+  border-style: solid;
+  border-color:#6B6969;
 }
 
 .footer-nav > ul{
@@ -260,6 +274,19 @@ header a {
   justify-content: center;
   gap:10%;
   flex-wrap: wrap;
+  padding:30px;
+}
+
+.sites{
+  margin-top:30px;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.copyright{
+  margin-top:20px;
+  text-align: center;
+  color:#ffffff;
 }
 
 
