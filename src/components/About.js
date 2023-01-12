@@ -1,5 +1,5 @@
 import React from 'react'
-import photo from '../portfolio-photo.JPG'
+
 
 const About = () => {
 
@@ -10,7 +10,7 @@ const About = () => {
       <h1>About me</h1>
 
       <div className="about-info">
-        <img src={photo} className="about-photo" alt="My portfolio" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/portfolio-photo.JPG?alt=media&token=f72d9c89-b609-430f-a927-fb1dce1f0743" className="about-photo" alt="My portfolio" />
 
         <ul className="about-info-text">
           <li>Name: Vince Baron Mangahis</li>
