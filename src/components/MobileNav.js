@@ -1,21 +1,10 @@
-import React, {useState}from 'react';
-import Hamburger from './Hamburger';
-import MobileNav from './MobileNav';
+import React from 'react'
 
-
-const Header = () => {
-    const [hamburger, toggleHamburger]  = useState(false);
-
-
+const MobileNav = ({hamburger_state}) => {
   return (
-    <header className="header">
-        <h1 className="logo"><a href="#home">VM</a></h1>
-    <MobileNav hamburger_state={hamburger} />
-       <Hamburger toggle={toggleHamburger} hamburger_state={hamburger}/>
-       
-        <nav className="navbar">
-            <ul>
-            <li>
+    <nav className={hamburger_state ? "mobile-nav active" : "mobile-nav"}>
+        <ul>
+        <li>
                 <a href="#hero-section">
                 Home
                 </a>
@@ -50,14 +39,9 @@ const Header = () => {
                 Contact
                 </a>
             </li>
-            </ul>
-        </nav>
-
-
-      
-
-    </header>
+        </ul>
+    </nav>
   )
 }
 
-export default Header;
+export default MobileNav

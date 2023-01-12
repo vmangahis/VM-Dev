@@ -36,17 +36,26 @@ header{
   display:flex;
   align-items: center;
   justify-content: space-between;
-
-  margin:10px;
+  padding:20px;
 }
 
 
 header a {
   text-decoration: none;
   color:#aecbda;
+  margin: 20px;
 }
 
-.navbar{
+
+
+
+.hero-banner{
+  background: linear-gradient(rgba(25,25,31,0.8), rgba(25,25,31,0.8)), url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+}
+
+.navbar > ul{
   display:flex;
   gap:3%;
   flex:1;
@@ -57,9 +66,7 @@ header a {
 .hero-section{
   width:100%;
   height:800px;
-  background: linear-gradient(rgba(25,25,31,0.8), rgba(25,25,31,0.8)), url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
+ 
   position: relative;
   display:flex;
   flex-direction: column;
@@ -289,6 +296,23 @@ header a {
   color:#ffffff;
 }
 
+.mobile-nav{
+  display:none;
+}
+
+
+.hamburger-button{
+  display:block;
+  position: relative;
+width:50px;
+cursor: pointer;
+appearance: none;
+background: none;
+border:none;
+outline: none;
+}
+
+
 
 
 @media(max-width:1385px){
@@ -301,6 +325,69 @@ header a {
   .about-info-text{
     text-align: center;
     
+  }
+}
+
+@media(max-width:800px){
+  
+  .hamburger-button{
+    display:block;
+    margin-left:auto;
+    margin-right:10px;
+    z-index:101;
+  }
+
+  .hamburger-button .burger-bar, .hamburger-button::after, .hamburger-button::before{
+    content: '';
+    display:block;
+    width:100%;
+    height:3px;
+    background-color: #ffffff;
+    margin: 7px;
+    transition: 0.4s;
+    
+  }
+
+  .hamburger-button.active::before{
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .burger-bar{
+    opacity:1;
+  }
+
+  .hamburger-button.active::after{
+    transform: rotate(45deg) translate(-8px, -4.5px);
+  }
+
+  .navbar{
+    display:none;
+  }
+
+  .mobile-nav{
+    position:fixed;
+    top:0;
+    right:0;
+    left:100%;
+    margin-right:20px;
+    z-index:100;
+    min-height:100vh;
+    display:block;
+    width:100%;
+    background-color: #19191F;
+    transition:0.4s;
+  }
+
+.mobile-nav > ul{
+  margin: 150px 0 0 -25px;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+  .mobile-nav.active{
+    left:65%;
+    transition:0.4s;
   }
 }
 
