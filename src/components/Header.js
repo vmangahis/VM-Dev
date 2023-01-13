@@ -6,12 +6,27 @@ import MobileNav from './MobileNav';
 const Header = () => {
     const [hamburger, toggleHamburger]  = useState(false);
 
+    const [headerColor, changeHeaderColor] = useState(false);
+
+    const changeColor = () =>{
+        if(window.scrollY >= 100)
+        {
+            changeHeaderColor(true);
+        }
+
+        else{
+            changeHeaderColor(false);
+        }
+        
+    }
+
+    window.addEventListener("scroll", changeColor);
 
   return (
-    <header className="header">
+    <header className={headerColor ? "header scroll" : "header"}>
         <h1 className="logo"><a href="#home">VM</a></h1>
-    <MobileNav hamburger_state={hamburger} />
-       <Hamburger toggle={toggleHamburger} hamburger_state={hamburger}/>
+            <MobileNav hamburger_state={hamburger} />
+            <Hamburger toggle={toggleHamburger} hamburger_state={hamburger}/>
        
         <nav className="navbar">
             <ul>

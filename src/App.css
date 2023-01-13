@@ -30,22 +30,40 @@ li{
   list-style-type: none;
 }
 
-
-
-header{
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  padding:20px;
-}
-
-
 header a {
   text-decoration: none;
   color:#aecbda;
   margin: 20px;
 }
 
+
+.header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:20px;
+  position:fixed;
+  width:100%;
+  z-index:500;
+  transition:0.9s;
+}
+
+.header.scroll{
+  background:rgba(25,25,31,0.9);
+  backdrop-filter:blur(1px);
+  transition: 0.9s;
+}
+
+
+
+
+
+
+
+.navbar{
+  position: fixed;
+  right:0;
+}
 
 
 
@@ -60,6 +78,7 @@ header a {
   gap:3%;
   flex:1;
   justify-content: flex-end;
+ 
 }
 
 
@@ -298,6 +317,7 @@ header a {
 
 .mobile-nav{
   display:none;
+  
 }
 
 
@@ -375,6 +395,8 @@ outline: none;
     display:block;
     width:100%;
     background-color: #19191F;
+    background:rgba(25,25,31,0.9);
+    backdrop-filter: blur(1px);
     transition:0.4s;
   }
 
