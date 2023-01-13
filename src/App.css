@@ -21,6 +21,7 @@ textarea{
 }
 
 
+
 body{
   background-color: #19191F;
 }
@@ -150,15 +151,19 @@ header a {
 }
 
 .about > h1, .experience > h1, .projects > h1,.skills > h1, .contact > h1{
-  
+  font-size:1.5rem;
   margin-bottom:20px;
 }
 
+
 .about-photo{
   height:auto;
-  width:400px;
+  width:35%;
+  min-width:100px;
   border-radius: 10%;
-  margin-right:25px;
+  
+  text-align: center;
+  
 }
 
 .about-info{
@@ -168,15 +173,17 @@ header a {
 
 .about-info-text > li{
   
-  font-size: clamp(0.1rem, 0.7rem, 2rem);
+  font-size:  1.3vw;
   font-weight: bold;
   white-space:nowrap;
 }
 
 .experience{
   padding:20px;
-  font-size: clamp(0.1rem, 0.7rem, 2rem);
+  font-size: 1.1vw;
 }
+
+
 
 
 .experience-table{
@@ -419,6 +426,10 @@ outline: none;
   .mobile-nav.active{
     left:65%;
     transition:0.4s;
+  }
+
+  .about > h1, .experience > h1, .projects > h1,.skills > h1, .contact > h1{
+    text-align: center;
   }
 }
 
