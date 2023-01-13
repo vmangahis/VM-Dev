@@ -4,6 +4,7 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   line-height: 50px;
+  
 }
 
 html{
@@ -71,6 +72,7 @@ header a {
   background: linear-gradient(rgba(25,25,31,0.8), rgba(25,25,31,0.8)), url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-repeat: no-repeat no-repeat;
   background-size: cover;
+  width:100%;
 }
 
 .navbar > ul{
@@ -166,10 +168,16 @@ header a {
 
 .about-info-text > li{
   
-  font-size:1.5rem;
+  font-size: clamp(0.1rem, 0.7rem, 2rem);
   font-weight: bold;
   white-space:nowrap;
 }
+
+.experience{
+  padding:20px;
+  font-size: clamp(0.1rem, 0.7rem, 2rem);
+}
+
 
 .experience-table{
   display:flex;
@@ -177,6 +185,7 @@ header a {
   gap:50px;
   
 }
+
 
 
 
