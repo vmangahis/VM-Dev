@@ -180,7 +180,7 @@ header a {
 
 .experience{
   padding:20px;
-  font-size: 1.1vw;
+  font-size: 1.;
 }
 
 
@@ -431,6 +431,16 @@ outline: none;
   .about > h1, .experience > h1, .projects > h1,.skills > h1, .contact > h1{
     text-align: center;
   }
+}
+
+@media(max-width: 1000px){
+  .experience{
+    font-size:3vw;
+  }
+
+ .about-info-text > li{
+  font-size:3vw;
+ } 
 }
 
 
