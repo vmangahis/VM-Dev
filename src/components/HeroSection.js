@@ -16,7 +16,7 @@ const About = () => {
 
 
                 <div className="animation">
-                 <span className="web-developer">Web Developer</span>
+                 <span className="web-developer">Software Developer</span>
                 </div>   
               </p>
 

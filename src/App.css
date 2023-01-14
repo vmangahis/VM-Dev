@@ -153,6 +153,7 @@ header li{
   
 }
 
+
 .about{
   display:block;
   width:50%;
@@ -376,41 +377,134 @@ outline: none;
 
 
 .web-developer{
-  border-right: .3rem solid #058ED9;
+  
   overflow:hidden;
   margin:0 auto;
   display:inline-block;
   white-space: nowrap;
   vertical-align: middle;
+  width: max-content;
+  
   word-break: break-all;
+  position:relative;
 
- animation:
-    typewriter 5s steps(10, end) infinite ,
-    blink-caret .5s step-end infinite;
+  
+ 
+}
 
+.web-developer::after{
+  position:absolute;
+  
+  
+  background-color: #19191F;
+  content:'';
+  left:0;
+  
+  width:100%;
+  height:100%;
+  animation:
+    typewriter 5s steps(15) infinite forwards,
+
+    blink-caret .4s step-end infinite;
+    
+}
+
+
+.experience-card{
+  
+  margin-bottom:35px;
+  
+}
+
+.spacer{
+  width:100px;
+}
+
+.timeline-line{
+  content:'';
+  width:10px;
+
+  background: #ffffff;
+  position: absolute;
+  top:0;
+  right:50%;
+  left:50%;
+  bottom:0;
+  height:auto;
+  border-radius:50px;
+}
+
+.experience-timeline{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-items:flex-start;
+  
+}
+
+.test{
+  width:100px;
+}
+
+.duties > li{
+  overflow:hidden;
 }
 
 
 
 
+
+
+
+
 @keyframes typewriter{
+
+  0%{
+    left:0;
+  }
+  5%{
+    left:0;
+  }
+  30%, 40%, 50%{
+      left:100%;
+    }
+
+  
+
+  90%{
+    left:0;
+  }
+
+  100%{
+    left:0;
+  }
+
+}
+
+@keyframes blink-caret{
+  from, to{
+    border-left: 2px solid #058ED9;
+  }
+
+  50%{
+    border-left: 2px solid transparent;
+  }
+}
+
+
+/*@keyframes typewriter{
   0%{
     width:0;
   }
 
-  10%{
-    width:0;
-  }
 
   50%{
     width:190px;
   }
 
   80%{
-    width:190px;
-  }
-  90%, 99%{
-    width:0;
+      width:190px;
+    
   }
 
   100%{
@@ -419,18 +513,8 @@ outline: none;
 
 
 
+}*/
 
-}
-
-@keyframes blink-caret{
-  from, to{
-    border-color: transparent;
-  }
-
-  50%{
-    border-color: #058ED9;
-  }
-}
 
 
 
@@ -520,13 +604,16 @@ outline: none;
    }
 }
 
+
 @media(max-width: 1000px){
   .experience{
     font-size:3vw;
   }
 
- .about-info-text > li{
-  font-size:3vw;
+ .about-info-text{
+  margin: 50px 0 0 0;
+  font-size:2vw;
+  
  } 
 
  .svg-hero{
@@ -554,6 +641,17 @@ outline: none;
   .about-info-text{
     padding:0;
   }
+}
+
+@media(max-width:602px){
+
+}
+
+@media(max-width:850px){
+    .about > h1, .experience > h1, .projects > h1, .skills  > h1, .contact > h1{
+      font-size:5vw !important;
+
+    }
 }
 
 
