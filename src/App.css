@@ -143,7 +143,7 @@ header li{
   transition:.5s;
 }
 
-.about, .experience, .projects, .skills, .contact{
+ .experience, .projects, .skills, .contact{
   display:block;
   width:50%;
   margin-left:auto;
@@ -151,8 +151,18 @@ header li{
   margin-top:100px;
   color:white;
   
-  
 }
+
+.about{
+  display:block;
+  width:50%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:20px;
+  color:white;
+}
+
+
 
 .experience, .projects, .skills, .contact{
   padding-top:50px;
@@ -169,7 +179,7 @@ header li{
 }
 
 .about > h1, .experience > h1, .projects > h1,.skills > h1, .contact > h1{
-  font-size:1.5rem;
+  font-size:1.8vw;
   margin-bottom:20px;
 }
 
@@ -189,11 +199,8 @@ header li{
   flex-direction: row;
 }
 
-.about-info-text > li{
-  
-  font-size:  1.3vw;
-  font-weight: bold;
-  white-space:nowrap;
+.about-info-text {
+  margin-left:50px;
 }
 
 .experience{
