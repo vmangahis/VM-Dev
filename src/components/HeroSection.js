@@ -1,14 +1,34 @@
-import React from 'react'
+import React from 'react';
+import {ReactComponent as DevSVG} from '../images/web-dev.svg';
+import Button from './Button';
 
 
 const About = () => {
   return (
     <div className="hero-section" id="hero-section">  
-          <div>
-          <h1 className="banner-text">Vince Mangahis - Software Developer in the Philippines</h1>
-          <button className="contact-button">Contact me</button>
-          </div>
+
+
+            <div className="hero-text-container">
+              <p className="hero-text">
+                Hi there, my name is<h1 className="name">Vince Baron Mangahis</h1>
+                <p>your</p>
+
+
+
+                <div className="animation">
+                 <span className="web-developer">Web Developer</span>
+                </div>   
+              </p>
+
+              <Button button="hero-button" buttonText="Contact me"/> 
+            </div>
+              
+            <div className="svg-hero">
+            <DevSVG />
+            </div>
+            
     </div>
+    
   )
 }
 

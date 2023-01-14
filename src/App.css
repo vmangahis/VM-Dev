@@ -4,7 +4,7 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   line-height: 50px;
-  
+  color:#ffffff;
 }
 
 html{
@@ -34,8 +34,12 @@ li{
 
 header a {
   text-decoration: none;
-  color:#aecbda;
+  color:#058ED9;
   margin: 20px;
+}
+
+header li{
+  font-weight:bold;
 }
 
 
@@ -59,7 +63,9 @@ header a {
 
 
 
-
+.name{
+  color:#058ED9;
+}
 
 
 .navbar{
@@ -69,12 +75,7 @@ header a {
 
 
 
-.hero-banner{
-  background: linear-gradient(rgba(25,25,31,0.8), rgba(25,25,31,0.8)), url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-  background-repeat: no-repeat no-repeat;
-  background-size: cover;
-  width:100%;
-}
+
 
 .navbar > ul{
   display:flex;
@@ -86,24 +87,41 @@ header a {
 
 
 .hero-section{
-  width:100%;
+  width: 100%;
   height:800px;
- 
+  
   position: relative;
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+  gap:20%;
 }
 
-.hero-section > div {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap:75px;
+.hero-text-container{
+  margin-left:10%;
 }
+
+.svg-hero{
+  margin-right:10%;
+}
+
+.hero-text ,.hero-text > *:not(h1){
+  font-size:26px;
+  line-height:5rem;
+}
+
+
+.hero-button{
+  background-color: transparent;
+  border:2px solid #F4EBD9;
+  font-size:1.2rem;
+  border-radius:5px;
+  cursor: pointer;
+  margin-top:10px;
+  padding:10px;
+}
+
 
 .banner-text{
   color:white;
@@ -158,7 +176,7 @@ header a {
 
 .about-photo{
   height:auto;
-  width:35%;
+  width:50%;
   min-width:100px;
   border-radius: 10%;
   
@@ -350,6 +368,64 @@ outline: none;
 
 
 
+.web-developer{
+  border-right: .3rem solid #058ED9;
+  overflow:hidden;
+  margin:0 auto;
+  display:inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  word-break: break-all;
+
+ animation:
+    typewriter 5s steps(10, end) infinite ,
+    blink-caret .5s step-end infinite;
+
+}
+
+
+
+
+@keyframes typewriter{
+  0%{
+    width:0;
+  }
+
+  10%{
+    width:0;
+  }
+
+  50%{
+    width:190px;
+  }
+
+  80%{
+    width:190px;
+  }
+  90%, 99%{
+    width:0;
+  }
+
+  100%{
+    width:0;
+  }
+
+
+
+
+}
+
+@keyframes blink-caret{
+  from, to{
+    border-color: transparent;
+  }
+
+  50%{
+    border-color: #058ED9;
+  }
+}
+
+
 
 @media(max-width:1385px){
   .about-info{
@@ -431,6 +507,10 @@ outline: none;
   .about > h1, .experience > h1, .projects > h1,.skills > h1, .contact > h1{
     text-align: center;
   }
+
+  .about{
+    text-align: center;
+   }
 }
 
 @media(max-width: 1000px){
@@ -441,7 +521,33 @@ outline: none;
  .about-info-text > li{
   font-size:3vw;
  } 
+
+ .svg-hero{
+  display:none;
+ }
+
+
+ .hero-section{
+  text-align: center;
+ }
+ .hero-text-container
+ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
 }
+
+
+@media(max-width:1385px)
+{
+  .about-info-text{
+    padding:0;
+  }
+}
+
 
 
 

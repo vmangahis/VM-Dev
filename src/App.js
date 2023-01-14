@@ -12,10 +12,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="hero-banner">
+      
         <Header />
         <HeroSection />
-      </div>
         <About />
         <Experience />
         <Projects />
