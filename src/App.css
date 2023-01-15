@@ -413,12 +413,21 @@ outline: none;
 .experience-card{
   
   margin-bottom:35px;
-  
+  display:flex;
+  flex-direction: column;
+  width:40%;
 }
 
-.spacer{
-  width:100px;
+
+
+.even{
+  margin-left:auto;
+  text-align:right;
 }
+
+
+
+
 
 .timeline-line{
   content:'';
@@ -427,27 +436,25 @@ outline: none;
   background: #ffffff;
   position: absolute;
   top:0;
-  right:50%;
   left:50%;
   bottom:0;
   height:auto;
   border-radius:50px;
+  transform: translateX(-50%);
 }
+
+
 
 .experience-timeline{
   position: relative;
   display:flex;
   flex-direction: column;
-  align-items:flex-start;
+  flex-basis:100%;
   
 }
 
-.test{
-  width:100px;
-}
-
-.duties > li{
-  overflow:hidden;
+.duties > li {
+  list-style-type: disc;
 }
 
 
@@ -633,6 +640,11 @@ outline: none;
   align-items: center;
  }
 
+ .experience-card{
+    font-size:2vw;
+    width:30%
+ }
+
 }
 
 
@@ -654,6 +666,11 @@ outline: none;
     }
 }
 
+@media(max-width:701px){
+  .experience-card{
+    font-size:2vw;
+  }
+}
 
 
 

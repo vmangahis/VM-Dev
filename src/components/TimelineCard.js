@@ -20,7 +20,7 @@ const TimelineCard = ({title, date, company, respons, rowType}) => {
                     </li>]
                     );
                   })}
-                  <div className="spacer"></div>
+                  
               </ul>
               
           </div>
