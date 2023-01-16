@@ -145,7 +145,7 @@ header li{
 
  .experience, .projects, .skills, .contact{
   display:block;
-  width:50%;
+  width:75%;
   margin-left:auto;
   margin-right: auto;
   margin-top:100px;
@@ -156,7 +156,7 @@ header li{
 
 .about{
   display:block;
-  width:50%;
+  width:75%;
   margin-left:auto;
   margin-right: auto;
   margin-top:20px;
@@ -187,7 +187,7 @@ header li{
 
 .about-photo{
   height:auto;
-  width:50%;
+  width:20%;
   min-width:100px;
   border-radius: 10%;
   
@@ -206,7 +206,9 @@ header li{
 
 .experience{
   padding:20px;
-  font-size: 1.;
+  font-size: 1vw;
+  
+  width:75%;
 }
 
 
@@ -245,9 +247,7 @@ header li{
   font-style:italic;
 }
 
-.responsibilities > li{
-  list-style-type:disc;
-}
+
 
 .project-container{
   display:flex;
@@ -410,20 +410,50 @@ outline: none;
 }
 
 
+
 .experience-card{
   
   margin-bottom:35px;
   display:flex;
   flex-direction: column;
+  height:auto;
   width:40%;
+  background-color: #6B6969;
+  padding:50px;
+  border-radius: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position:relative;
 }
 
+
+
+.odd::before, .even::before{
+  position:absolute;
+  
+
+  width:2%;
+  height:4%;
+   background-color:#6B6969; 
+  
+  content:'';
+  top:10%;
+  left:98.5%;
+  
+  transform: rotate(45deg);
+}
 
 
 .even{
   margin-left:auto;
-  text-align:right;
+  text-align:left;
 }
+
+.even::before{
+  left:-1%;
+}
+
+
 
 
 
@@ -444,6 +474,11 @@ outline: none;
 }
 
 
+.duties > li, .duties{
+  list-style-position:inside;
+  margin:0;
+  padding:0;
+}
 
 .experience-timeline{
   position: relative;
@@ -452,11 +487,6 @@ outline: none;
   flex-basis:100%;
   
 }
-
-.duties > li {
-  list-style-type: disc;
-}
-
 
 
 
@@ -499,28 +529,6 @@ outline: none;
 }
 
 
-/*@keyframes typewriter{
-  0%{
-    width:0;
-  }
-
-
-  50%{
-    width:190px;
-  }
-
-  80%{
-      width:190px;
-    
-  }
-
-  100%{
-    width:0;
-  }
-
-
-
-}*/
 
 
 
@@ -613,9 +621,7 @@ outline: none;
 
 
 @media(max-width: 1000px){
-  .experience{
-    font-size:3vw;
-  }
+  
 
  .about-info-text{
   margin: 50px 0 0 0;
@@ -642,8 +648,15 @@ outline: none;
 
  .experience-card{
     font-size:2vw;
-    width:30%
+    width:40%;
+    
  }
+
+ .odd::before{
+  left:93%;
+ }
+
+
 
 }
 
@@ -672,5 +685,24 @@ outline: none;
   }
 }
 
+@media(max-width:900px){
+  .odd, .even{
+    width:70%;
+  }
+
+  
+  .odd::before{
+    left:0
+  }
+
+  .timeline-line{
+    left:10%;
+  }
+
+  .experience-timeline{
+    align-items: flex-end;
+  }
+
+}
 
 
