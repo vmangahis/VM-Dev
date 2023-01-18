@@ -187,7 +187,7 @@ header li{
 
 .about-photo{
   height:auto;
-  width:20%;
+  width:calc(50% - 100px);
   min-width:100px;
   border-radius: 10%;
   
@@ -410,35 +410,42 @@ outline: none;
 }
 
 
-
-.experience-card{
-  
-  margin-bottom:35px;
-  display:flex;
-  flex-direction: column;
-  height:auto;
-  width:40%;
-  background-color: #6B6969;
-  padding:50px;
-  border-radius: 10px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position:relative;
+.experience-timeline{
+  position: relative;
 }
 
 
 
-.odd::before, .even::before{
-  position:absolute;
+.experience-card{
   
+  margin-bottom:35px;
+  display: flex;
+  flex-direction: column;
+  height:auto;
+  width:calc(50% - 50px);
+  background-color: #23232c;
+  padding:50px;
+  border-radius: 10px;
+  z-index:1;
+  position:relative;
+  
+}
 
-  width:2%;
-  height:4%;
-   background-color:#6B6969; 
-  
-  content:'';
+
+
+
+
+
+.odd > section::before, .even > section::before{
+  position:absolute;
+  width:15px;
+  height:15px;
+  background-color:#23232c;
+ 
+  z-index:-1;
+  content:"";
   top:10%;
-  left:98.5%;
+  left:99%;
   
   transform: rotate(45deg);
 }
@@ -449,12 +456,18 @@ outline: none;
   text-align:left;
 }
 
-.even::before{
+.even > section::before{
   left:-1%;
 }
 
 
+.even{
+  justify-content: flex-end;
+}
 
+.odd{
+  justify-content: flex-start;
+}
 
 
 
@@ -474,19 +487,8 @@ outline: none;
 }
 
 
-.duties > li, .duties{
-  list-style-position:inside;
-  margin:0;
-  padding:0;
-}
 
-.experience-timeline{
-  position: relative;
-  display:flex;
-  flex-direction: column;
-  flex-basis:100%;
-  
-}
+
 
 
 
@@ -688,12 +690,14 @@ outline: none;
 @media(max-width:900px){
   .odd, .even{
     width:70%;
+    justify-content: flex-end;
+    margin-left:auto;
   }
 
-  
-  .odd::before{
-    left:0
+  .odd > section::before{
+    left:-1%;
   }
+  
 
   .timeline-line{
     left:10%;
