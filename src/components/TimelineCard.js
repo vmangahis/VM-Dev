@@ -1,12 +1,14 @@
 import React from 'react'
 
 
-const TimelineCard = ({title, date, company, respons, rowType, expIcons}) => {
+
+
+const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
   return (
-    
-    <aside className={rowType === "odd" ? "experience-card odd" : "experience-card even"}>
-      <section>
-          {expIcons}
+      
+      <section className={rowType === "odd" ? "experience-card odd" : "experience-card even"}>
+          {expIcon}
+          
           <div className="experience-header">
               <h3 className="experience-title">{title}</h3>
               <span className="date">{date}</span>
@@ -19,7 +21,7 @@ const TimelineCard = ({title, date, company, respons, rowType, expIcons}) => {
                 })}
               </ul>
           </section>   
-    </aside>
+
     
   
   )

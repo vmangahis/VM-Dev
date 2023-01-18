@@ -1,3 +1,8 @@
+:root{
+  --bg-color:#19191F;
+   --font-color: #058ED9;
+}
+
 *{
   border:0;
   margin:0;
@@ -23,7 +28,7 @@ textarea{
 
 
 body{
-  background-color: #19191F;
+  background-color: var(--bg-color);
 }
 
 
@@ -34,7 +39,7 @@ li{
 
 header a {
   text-decoration: none;
-  color:#058ED9;
+  color:var(--font-color);
   margin: 20px;
 }
 
@@ -64,7 +69,7 @@ header li{
 
 
 .name{
-  color:#058ED9;
+  color:var(--font-color);
 }
 
 
@@ -143,7 +148,7 @@ header li{
   transition:.5s;
 }
 
- .experience, .projects, .skills, .contact{
+ .experience, .projects, .skills, .contact, .about{
   display:block;
   width:75%;
   margin-left:auto;
@@ -154,14 +159,6 @@ header li{
 }
 
 
-.about{
-  display:block;
-  width:75%;
-  margin-left:auto;
-  margin-right: auto;
-  margin-top:20px;
-  color:white;
-}
 
 
 
@@ -412,6 +409,8 @@ outline: none;
 
 .experience-timeline{
   position: relative;
+  width:100%;
+  
 }
 
 
@@ -431,24 +430,63 @@ outline: none;
   
 }
 
-
-
-
-
-
-.odd > section::before, .even > section::before{
+.experience-card::before{
   position:absolute;
-  width:15px;
-  height:15px;
-  background-color:#23232c;
- 
-  z-index:-1;
-  content:"";
+  width:20px;
+  height:20px;
+  content:'';
   top:10%;
-  left:99%;
-  
-  transform: rotate(45deg);
+  bottom:0;
+  background-color:#23232c;
+  transform:rotate(-45deg);
+  z-index:-10;
 }
+
+.expIcon{
+ 
+  position: absolute;
+  content: '';
+  top:5%;
+  border:2px solid #ffffff;
+  padding:10px;
+  background-color: #19191F ;
+
+  border-radius: 35px;
+  height:auto;
+  right:-85px;
+  max-width:35px;
+  bottom:0;
+  
+}
+
+.expIcon > path{
+  fill:blue;
+}
+
+
+
+
+
+.odd::before{
+  right:-.5em;
+  
+  
+}
+
+.even::before{
+  right:0;
+  left:-.5em;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .even{
@@ -456,17 +494,18 @@ outline: none;
   text-align:left;
 }
 
-.even > section::before{
-  left:-1%;
-}
 
 
 .even{
   justify-content: flex-end;
+  
+
 }
 
 .odd{
   justify-content: flex-start;
+  
+  
 }
 
 
@@ -474,16 +513,16 @@ outline: none;
 
 .timeline-line{
   content:'';
-  width:10px;
+  width:1%;
 
-  background: #ffffff;
+  background: var(--font-color);
   position: absolute;
   top:0;
   left:50%;
   bottom:0;
   height:auto;
   border-radius:50px;
-  transform: translateX(-50%);
+  
 }
 
 
@@ -522,7 +561,7 @@ outline: none;
 
 @keyframes blink-caret{
   from, to{
-    border-left: 2px solid #058ED9;
+    border-left: 2px solid var(--font-color);
   }
 
   50%{
@@ -575,6 +614,7 @@ outline: none;
   .burger-bar{
     opacity:1;
   }
+
 
   .hamburger-button.active::after{
     transform: rotate(45deg) translate(-8px, -4.5px);
@@ -651,12 +691,10 @@ outline: none;
  .experience-card{
     font-size:2vw;
     width:40%;
-    
+    position: relative;
  }
 
- .odd::before{
-  left:93%;
- }
+
 
 
 
@@ -694,10 +732,10 @@ outline: none;
     margin-left:auto;
   }
 
-  .odd > section::before{
-    left:-1%;
+  .odd::before{
+    left:-.5em;
   }
-  
+
 
   .timeline-line{
     left:10%;
