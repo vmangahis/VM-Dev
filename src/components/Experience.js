@@ -1,6 +1,6 @@
 import TimelineCard from "./TimelineCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSchool } from '@fortawesome/free-solid-svg-icons';
+import { faSchool, faBusinessTime } from '@fortawesome/free-solid-svg-icons';
 
 
 const Experience = () => {
@@ -13,8 +13,8 @@ const Experience = () => {
             </div>
             
             <TimelineCard expIcon={<FontAwesomeIcon icon={faSchool} className="expIcon" inverse />}rowType="odd" title="Frontend Developer (Intern)" company="DepEd Biñan City Division Information Office"  respons={['Recreated UI of RMS and main site with the use of frontend language', 'Worked with co-intern designer']} date="April 2022 - July 2022" />
-            <TimelineCard rowType="even" title="Freelance Web Developer" respons={['']} company="Upwork"  date="September 2020 - Present" />
-            <TimelineCard rowType="odd" title="Freelance Virtual Assistant" respons={['Basic Data Entry tasks', 'Loom video recordings','Daily cryptocurrency transaction tracking','Earned Top Rated badge']} company="Upwork"  date="September 2020 - Present" />
+            <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="even" title="Freelance Web Developer" respons={['']} company="Upwork"  date="September 2020 - Present" />
+            <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="odd" title="Freelance Virtual Assistant" respons={['Basic Data Entry tasks', 'Loom video recordings','Daily cryptocurrency transaction tracking','Earned Top Rated badge']} company="Upwork"  date="September 2020 - Present" />
             
 
 

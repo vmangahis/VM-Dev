@@ -203,7 +203,7 @@ header li{
 
 .experience{
   padding:20px;
-  font-size: 1vw;
+  font-size: clamp(1.1em, 1.3em, 1vw);
   
   width:75%;
 }
@@ -460,10 +460,12 @@ outline: none;
 }
 
 .expIcon > path{
-  fill:blue;
+  fill:var(--font-color);
 }
 
-
+.even > .expIcon{
+  left:-75px;
+}
 
 
 
@@ -477,17 +479,6 @@ outline: none;
   right:0;
   left:-.5em;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .even{
   margin-left:auto;
@@ -667,7 +658,7 @@ outline: none;
 
  .about-info-text{
   margin: 50px 0 0 0;
-  font-size:2vw;
+  
   
  } 
 
@@ -689,8 +680,8 @@ outline: none;
  }
 
  .experience-card{
-    font-size:2vw;
-    width:40%;
+    font-size:clamp(15px, 1.5em, 1vw);
+    
     position: relative;
  }
 
@@ -719,11 +710,7 @@ outline: none;
     }
 }
 
-@media(max-width:701px){
-  .experience-card{
-    font-size:2vw;
-  }
-}
+
 
 @media(max-width:900px){
   .odd, .even{
@@ -735,6 +722,15 @@ outline: none;
   .odd::before{
     left:-.5em;
   }
+
+  .expIcon{
+    left:0;
+  }
+
+  .odd > .expIcon, .even > .expIcon{
+      left:-150px;
+  }
+
 
 
   .timeline-line{
