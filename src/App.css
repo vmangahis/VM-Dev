@@ -415,70 +415,95 @@ outline: none;
 
 
 
+
+
+
 .experience-card{
   
   margin-bottom:35px;
   display: flex;
   flex-direction: column;
-  height:auto;
-  width:calc(50% - 50px);
-  background-color: #23232c;
+
+ 
+ 
   padding:50px;
-  border-radius: 10px;
-  z-index:1;
   position:relative;
-  
+  z-index:1; 
 }
 
-.experience-card::before{
+
+
+
+.odd{
+  align-items: flex-start;
+}
+
+.even{
+  align-items: flex-end;
+}
+
+.experience-card > section{
+  width: calc(50% - 40px);
+  background-color: #23232c;
+  padding:50px;
+  position: relative;
+  border-radius:10px;
+}
+
+
+
+.odd > section::before, .even > section::before{
   position:absolute;
   width:20px;
   height:20px;
   content:'';
-  top:10%;
+  top:30px;
   bottom:0;
   background-color:#23232c;
   transform:rotate(-45deg);
   z-index:-10;
+  
+}
+
+.even > section::before{
+  left:-8px;
+}
+
+.odd > section::before{
+  right:-7px;
+}
+
+
+.expIcon > path{
+  fill:var(--font-color);
 }
 
 .expIcon{
- 
   position: absolute;
   content: '';
-  top:5%;
+  top:4%;
   border:2px solid #ffffff;
   padding:10px;
   background-color: #19191F ;
 
   border-radius: 35px;
   height:auto;
-  right:-85px;
+  right:-75px;
   max-width:35px;
   bottom:0;
   
 }
 
-.expIcon > path{
-  fill:var(--font-color);
+
+
+.even > section >  .expIcon{
+  left:-70px;
 }
 
-.even > .expIcon{
-  left:-75px;
-}
 
 
 
-.odd::before{
-  right:-.5em;
-  
-  
-}
 
-.even::before{
-  right:0;
-  left:-.5em;
-}
 
 .even{
   margin-left:auto;
@@ -681,7 +706,6 @@ outline: none;
 
  .experience-card{
     font-size:clamp(15px, 1.5em, 1vw);
-    
     position: relative;
  }
 
@@ -713,18 +737,26 @@ outline: none;
 
 
 @media(max-width:900px){
+
+  .experience-card > section{
+    width:100%;
+  }
+
+
   .odd, .even{
     width:70%;
-    justify-content: flex-end;
+    
     margin-left:auto;
   }
 
-  .odd::before{
+  .odd > section::before{
     left:-.5em;
   }
 
-  .expIcon{
-    left:0;
+  .expIcon, .even > section > .expIcon {
+
+
+    left:-200px;
   }
 
   .odd > .expIcon, .even > .expIcon{
@@ -737,9 +769,7 @@ outline: none;
     left:10%;
   }
 
-  .experience-timeline{
-    align-items: flex-end;
-  }
+ 
 
 }
 

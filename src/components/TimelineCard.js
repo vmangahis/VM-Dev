@@ -5,8 +5,8 @@ import React from 'react'
 
 const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
   return (
-      
-      <section className={rowType === "odd" ? "experience-card odd" : "experience-card even"}>
+      <div className={rowType === "odd" ? "experience-card odd" : "experience-card even"}>
+      <section>
           {expIcon}
           
           <div className="experience-header">
@@ -22,7 +22,7 @@ const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
               </ul>
           </section>   
 
-    
+          </div>
   
   )
 }
