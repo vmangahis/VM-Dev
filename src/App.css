@@ -184,7 +184,7 @@ header li{
 
 .about-photo{
   height:auto;
-  width:calc(50% - 100px);
+  max-width:50%;
   min-width:100px;
   border-radius: 10%;
   
@@ -203,7 +203,7 @@ header li{
 
 .experience{
   padding:20px;
-  font-size: clamp(1.1em, 1.3em, 1vw);
+
   
   width:75%;
 }
@@ -481,7 +481,7 @@ outline: none;
 .expIcon{
   position: absolute;
   content: '';
-  top:4%;
+  top:10px;
   border:2px solid #ffffff;
   padding:10px;
   background-color: #19191F ;
@@ -494,11 +494,13 @@ outline: none;
   
 }
 
-
-
-.even > section >  .expIcon{
+.even > section  > .expIcon{
+  right:0;
   left:-70px;
 }
+
+
+
 
 
 
@@ -529,7 +531,7 @@ outline: none;
 
 .timeline-line{
   content:'';
-  width:1%;
+  width:2px;
 
   background: var(--font-color);
   position: absolute;
@@ -705,11 +707,14 @@ outline: none;
  }
 
  .experience-card{
-    font-size:clamp(15px, 1.5em, 1vw);
+    font-size:clamp(15px, 1.1em, 2em);
     position: relative;
  }
 
-
+ .even > section  > .expIcon{
+  right:0;
+  left:-90px;
+}
 
 
 
@@ -723,9 +728,6 @@ outline: none;
   }
 }
 
-@media(max-width:602px){
-
-}
 
 @media(max-width:850px){
     .about > h1, .experience > h1, .projects > h1, .skills  > h1, .contact > h1{
@@ -740,37 +742,84 @@ outline: none;
 
   .experience-card > section{
     width:100%;
+    
+  }
+
+  .odd, .even{
+    margin-left:20px;
   }
 
 
+
+
   .odd, .even{
-    width:70%;
+    width:100%;
     
-    margin-left:auto;
   }
 
   .odd > section::before{
     left:-.5em;
   }
 
-  .expIcon, .even > section > .expIcon {
+ 
 
-
-    left:-200px;
+  .expIcon{
+    left:-90px;
   }
 
-  .odd > .expIcon, .even > .expIcon{
-      left:-150px;
-  }
+
 
 
 
   .timeline-line{
-    left:10%;
+    left:10px;
   }
 
  
 
 }
 
+@media(max-width:550px){
+ 
+  .about, .experience{
+    width:90%;
+  }
+}
+
+@media(max-width:460px){
+
+  
+  .odd > section::before, .even > section::before{
+    width:0;
+  }
+
+  .timeline-line{
+    width:0;
+  }
+
+  .expIcon{
+    display:none;
+  }
+
+  .experience-timeline{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .experience-card > section{
+    width:100%;
+  }
+
+
+  .odd, .even{
+    margin:0;
+  }
+
+  .experience-card{
+    padding:0;
+    
+    margin-bottom:50px;
+  }
+  
+}
 
