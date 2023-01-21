@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/vm-dev/static/css/main.6bb5bed4.css",
-    "main.js": "/vm-dev/static/js/main.6af7ac92.js",
+    "main.css": "/vm-dev/static/css/main.ac6d4b95.css",
+    "main.js": "/vm-dev/static/js/main.5dfad11e.js",
     "static/js/787.37faa4c4.chunk.js": "/vm-dev/static/js/787.37faa4c4.chunk.js",
     "static/media/web-dev.svg": "/vm-dev/static/media/web-dev.5b40da81d5a43773e666ac5115ce0b21.svg",
     "index.html": "/vm-dev/index.html",
-    "main.6bb5bed4.css.map": "/vm-dev/static/css/main.6bb5bed4.css.map",
-    "main.6af7ac92.js.map": "/vm-dev/static/js/main.6af7ac92.js.map",
+    "main.ac6d4b95.css.map": "/vm-dev/static/css/main.ac6d4b95.css.map",
+    "main.5dfad11e.js.map": "/vm-dev/static/js/main.5dfad11e.js.map",
     "787.37faa4c4.chunk.js.map": "/vm-dev/static/js/787.37faa4c4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6bb5bed4.css",
-    "static/js/main.6af7ac92.js"
+    "static/css/main.ac6d4b95.css",
+    "static/js/main.5dfad11e.js"
   ]
 }
