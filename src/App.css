@@ -184,8 +184,8 @@ header li{
 
 .about-photo{
   height:auto;
-  max-width:50%;
-  min-width:100px;
+  max-width:20%;
+  min-width:200px;
   border-radius: 10%;
   
   text-align: center;
@@ -203,10 +203,10 @@ header li{
 
 .experience{
   padding:20px;
-
-  
   width:75%;
 }
+
+
 
 
 
@@ -228,9 +228,6 @@ header li{
   
 }
 
-.experience-table > div > *{
-  flex: 0 0 75%;
-}
 
 .experience-date{
   font-size:1.2rem;
@@ -238,6 +235,7 @@ header li{
 
 .experience-title{
   font-weight:bold;
+  color: var(--font-color);
 }
 
 .company{
@@ -255,14 +253,15 @@ header li{
 }
 
 .project-card{
-  width:500px;
- height:500px;
+  
+  height:500px;
  background-size: cover;
  background-repeat: no-repeat;
- flex: 0 0 100%;
+  flex:0 0 75%;
  display: flex;
  justify-content:center;
  align-items: center;
+ background-repeat: no-repeat;
 }
 
 .project-name{
@@ -419,13 +418,9 @@ outline: none;
 
 
 .experience-card{
-  
   margin-bottom:35px;
   display: flex;
-  flex-direction: column;
-
- 
- 
+  flex-direction: column; 
   padding:50px;
   position:relative;
   z-index:1; 
@@ -433,10 +428,6 @@ outline: none;
 
 
 
-
-.odd{
-  align-items: flex-start;
-}
 
 .even{
   align-items: flex-end;
@@ -449,6 +440,19 @@ outline: none;
   position: relative;
   border-radius:10px;
 }
+
+
+
+.even{
+  justify-content: flex-end;
+  
+  
+}
+
+.odd{
+  justify-content: flex-start;
+}
+
 
 
 
@@ -514,17 +518,6 @@ outline: none;
 
 
 
-.even{
-  justify-content: flex-end;
-  
-
-}
-
-.odd{
-  justify-content: flex-start;
-  
-  
-}
 
 
 
@@ -548,7 +541,11 @@ outline: none;
 
 
 
+@keyframes expcard-odd{
+  0%{
 
+  }
+}
 
 
 
@@ -806,9 +803,6 @@ outline: none;
     flex-direction: column;
   }
 
-  .experience-card > section{
-    width:100%;
-  }
 
 
   .odd, .even{
