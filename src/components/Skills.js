@@ -1,37 +1,36 @@
 import React from 'react'
-import SkillBar from 'react-skillbars'
+import DevIcon from "devicon-react-svg";
+
 
 const Skills = () => {
 
-  // const skills = [
-  //   {type: 'Python', level: 90},
-  //   {type: 'Django', level: 85},
-  //   {type: 'PHP', level: 75},
-  //   {type: 'Laravel', level: 70},
-  //   {type: 'HTML', level: 70},
-  //   {type: 'Javascript', level: 70},
-  //   {type: 'JQuery', level: 70},
-  //   {type: 'React', level: 65},
-  //   {type: 'ExpressJS', level: 65},
-  //   {type: 'NodeJS', level: 60},
-  //   {type: 'CSS', level: 50},
-  // ]
+
+  const languages = [
+    {skill :  'django', },
+    {skill :  'laravel', },
+    {skill:  'react', },
+    {skill:  'bootstrap', },
+    {skill :  'jquery', },
+    
+]
 
 
-  const colors = {
-      bar: "#70848E",
-      title:{
-        text: "#fff",
-        background: "#19191F"
-      }
+  const langStyle = {
+    fill: "#058ED9",
+    width: "250px"
   }
+
+
 
 
   return (
     <div className='skills' id="skills">
       <h1>Skills</h1>
-      
-      {/* <SkillBar skills = {skills} colors={colors} /> */}
+      <div className="skills-container">
+      {languages.map(el => {
+        return(<DevIcon icon={el.skill} style={langStyle} />);
+      })}
+      </div>
       </div>
   )
 }

@@ -24,12 +24,16 @@ const Projects = () => {
       </a>
 
 
-      <a href="https://github.com/vmangahis/Kai" className="project-card" style={{ backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/kai.PNG?alt=media&token=c7f53b22-873c-44f8-8356-6d3fc37b3d0b) no-repeat', backgroundRepeat: 'no-repeat'}}
+      <a href="https://github.com/vmangahis/Kai" className="project-card" style={{ backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/kai.PNG?alt=media&token=c7f53b22-873c-44f8-8356-6d3fc37b3d0b)', backgroundRepeat: 'no-repeat'}}
       onMouseEnter={(e) => {
         e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/kai.PNG?alt=media&token=c7f53b22-873c-44f8-8356-6d3fc37b3d0b) no-repeat`
+        e.target.style.backgroundRepeat =  'no-repeat';
+        e.target.style.backgroundSize = 'cover';
       }}
       onMouseLeave={(e) =>{
         e.target.style.background = `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/kai.PNG?alt=media&token=c7f53b22-873c-44f8-8356-6d3fc37b3d0b) no-repeat`
+        e.target.style.backgroundRepeat =  'no-repeat';
+        e.target.style.backgroundSize = 'cover';
       }}
       >
       <p className="project-name">Kai</p>
