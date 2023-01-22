@@ -320,6 +320,7 @@ header li{
   outline: none;  
   border:2px solid transparent;
   transition: .2s linear;
+  border-radius:10px;
 }
 
 .form-control > input:focus, .form-control > textarea:focus{
@@ -465,7 +466,10 @@ outline: none;
   padding:50px;
   position:relative;
   z-index:1; 
+  
 }
+
+
 
 
 
@@ -486,12 +490,13 @@ outline: none;
 
 .even{
   justify-content: flex-end;
-  
+
   
 }
 
 .odd{
   justify-content: flex-start;
+
 }
 
 

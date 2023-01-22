@@ -2,8 +2,10 @@ import TimelineCard from "./TimelineCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSchool, faBusinessTime } from '@fortawesome/free-solid-svg-icons';
 
-
 const Experience = () => {
+
+
+
   return (
     <div className="experience" id="experience">
       <h1>Experience</h1>

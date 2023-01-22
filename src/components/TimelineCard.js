@@ -1,11 +1,47 @@
-import React from 'react'
-
-
-
-
+import {motion, useAnimation} from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
+
+
+
+  const control = useAnimation();
+  const {ref, inView} = useInView({
+    threshold: 0.4
+  });
+
+useEffect(() =>{
+  if(inView){
+    
+    control.start({
+      x: 0,
+      opacity:1,
+      transition: {
+        type: 'spring',
+        duration: .2,
+        bounce: 0.3
+      }
+    });
+  }
+
+  else{
+   
+    control.start({
+      x: "-50vw",
+      opacity: 0
+    });
+  }
+
+  
+  
+}, [inView, control])
+
+
   return (
-      <div className={rowType === "odd" ? "experience-card odd" : "experience-card even"}>
+      <motion.div
+      className={rowType === "odd" ? "experience-card odd" : "experience-card even"}    
+      animate={control}
+      ref={ref}>
       <section>
           {expIcon}
           
@@ -22,7 +58,7 @@ const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
               </ul>
           </section>   
 
-          </div>
+      </motion.div>
   
   )
 }
