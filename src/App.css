@@ -170,6 +170,13 @@ header li{
   border-color: #6B6969;
 }
 
+
+
+
+.contact{
+  width:35%;
+}
+
 .footer{
   display:block;
   width:100%;
@@ -308,9 +315,22 @@ header li{
   flex-direction: column;
 }
 
-.form-control > input, .form-control > textarea {
-  border-radius: 5px;
+.form-control > input, .form-control > textarea{
+  background-color: var(--exp-card-color);
+  outline: none;  
+  border:2px solid transparent;
+  transition: .2s linear;
 }
+
+.form-control > input:focus, .form-control > textarea:focus{
+  box-shadow:  0 0 3px 3px var(--font-color);
+  transition: .2s linear;
+}
+
+.form-control > textarea{
+  padding:10px;
+}
+
 
 .email-input{
   font-size:1.2rem;

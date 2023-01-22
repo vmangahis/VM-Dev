@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div className="contact" id="contact">
       <h1>Contact</h1>
-      <form className="contact-form" method="POST" action="https://reqres.in/api/users">
+      <form className="contact-form" method="POST" >
         
         <div className="form-control">
         <label htmlFor="">Email:</label>

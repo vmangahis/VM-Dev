@@ -20,9 +20,6 @@ const Skills = () => {
     width: "250px",
   }
 
-
-
-
   return (
     <div className='skills' id="skills">
       <h1>Skills</h1>
