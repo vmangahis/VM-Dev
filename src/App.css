@@ -1,6 +1,7 @@
 :root{
   --bg-color:#19191F;
    --font-color: #058ED9;
+  --exp-card-color:#23232c;
 }
 
 *{
@@ -188,6 +189,17 @@ header li{
   justify-content: center;
   gap:100px;
   flex-wrap: wrap;
+}
+
+.devIcon{
+  transition: .3s ease-in-out;
+  fill: var(--exp-card-color);
+  cursor: pointer;
+}
+
+.devIcon:hover{
+  fill: var(--font-color);
+  transition:  .3s ease-in-out;
 }
 
 
@@ -444,7 +456,7 @@ outline: none;
 
 .experience-card > section{
   width: calc(50% - 40px);
-  background-color: #23232c;
+  background-color: var(--exp-card-color);
   padding:50px;
   position: relative;
   border-radius:10px;
@@ -472,7 +484,7 @@ outline: none;
   content:'';
   top:30px;
   bottom:0;
-  background-color:#23232c;
+  background-color: var(--exp-card-color);
   transform:rotate(-45deg);
   z-index:-10;
   

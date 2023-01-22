@@ -16,8 +16,8 @@ const Skills = () => {
 
 
   const langStyle = {
-    fill: "#058ED9",
-    width: "250px"
+    fill: "",
+    width: "250px",
   }
 
 
@@ -28,7 +28,7 @@ const Skills = () => {
       <h1>Skills</h1>
       <div className="skills-container">
       {languages.map(el => {
-        return(<DevIcon icon={el.skill} style={langStyle} />);
+        return(<DevIcon icon={el.skill} style={langStyle} className="devIcon" />);
       })}
       </div>
       </div>
