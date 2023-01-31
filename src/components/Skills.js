@@ -11,6 +11,7 @@ const Skills = () => {
     {skill:  'react', },
     {skill:  'bootstrap', },
     {skill :  'jquery', },
+    {skill: 'dotnet'}
     
 ]
 

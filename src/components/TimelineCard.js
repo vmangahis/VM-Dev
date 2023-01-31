@@ -18,7 +18,7 @@ useEffect(() =>{
       opacity:1,
       transition: {
         type: 'spring',
-        duration: .2,
+        duration: 1,
         bounce: 0.3
       }
     });
