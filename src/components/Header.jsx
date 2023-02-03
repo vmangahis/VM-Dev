@@ -38,7 +38,7 @@ const Header = () => {
 
             <li>
                 <a href="#about">
-                About
+                Test
                 </a>
             </li>
 

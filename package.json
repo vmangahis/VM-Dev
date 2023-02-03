@@ -6,7 +6,9 @@
     "start": "nx exec -- vite",
     "serve": "nx exec -- vite",
     "build": "nx exec -- vite build",
-    "test": "nx exec -- vitest"
+    "test": "nx exec -- vitest",
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
   },
   "private": true,
   "devDependencies": {
