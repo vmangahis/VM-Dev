@@ -1,6 +1,6 @@
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
 
 
@@ -11,6 +11,7 @@ const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
   });
 
 useEffect(() =>{
+  
   if(inView){
     
     control.start({
@@ -27,14 +28,14 @@ useEffect(() =>{
   else{
    
     control.start({
-      x: "-50vw",
+      x: rowType === "odd" ? "-50vw": "50vw"/*"-50vw"*/,
       opacity: 0
     });
   }
 
   
   
-}, [inView, control])
+}, [inView, control, rowType])
 
 
   return (
