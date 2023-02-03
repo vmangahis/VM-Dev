@@ -4,8 +4,9 @@ import svgr from 'vite-plugin-svgr';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: './dist/portfolio-site'
+    outDir: './build/portfolio-site'
   },
+  base: 'vm-dev',
   server: {
     port: 4200,
     open: true,

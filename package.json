@@ -8,6 +8,7 @@
     "build": "nx exec -- vite build",
     "test": "nx exec -- vitest",
     "predeploy": "npm run build",
+    "preview": "vite preview",
    "deploy": "gh-pages -d build"
   },
   "private": true,
