@@ -70,13 +70,21 @@ header li{
 
 
 .name{
-  color:var(--font-color);
+   color:var(--font-color); 
+  display: block; 
+  font-size: 2em !important; 
+ 
+  font-weight: bold;
 }
 
 
 .navbar{
   position: fixed;
   right:0;
+}
+
+.animation{
+  display:block;
 }
 
 
@@ -126,6 +134,14 @@ header li{
   cursor: pointer;
   margin-top:10px;
   padding:10px;
+  transition: .5s;
+}
+
+.hero-button:hover{
+  background-color: #F4EBD9;
+  border:2px solid transparent;
+  color: var(--bg-color);
+  transition: .5s;
 }
 
 

@@ -6,22 +6,19 @@ import Button from './Button';
 const About = () => {
   return (
     <div className="hero-section" id="hero-section">  
-
-
-            <div className="hero-text-container">
+            <span className="hero-text-container">
               <p className="hero-text">
-                Hi there, my name is<h1 className="name">Vince Baron Mangahis</h1>
-                <p>your</p>
+                Hi there, my name is<span className="name">Vince Baron Mangahis</span>
+                your
 
 
-
-                <div className="animation">
+                <span className="animation">
                  <span className="web-developer">Software Developer</span>
-                </div>   
+                </span>   
               </p>
 
               <Button button="hero-button" buttonText="Contact me"/> 
-            </div>
+            </span>
               
             <div className="svg-hero">
             <DevSVG />

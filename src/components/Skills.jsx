@@ -26,7 +26,7 @@ const Skills = () => {
       <h1>Skills</h1>
       <div className="skills-container">
       {languages.map(el => {
-        return(<DevIcon icon={el.skill} style={langStyle} className="devIcon" />);
+        return(<DevIcon key={el.skill} icon={el.skill} style={langStyle} className="devIcon" />);
       })}
       </div>
       </div>

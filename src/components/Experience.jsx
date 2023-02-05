@@ -14,7 +14,7 @@ const Experience = () => {
       fetch(url
         )
       .then(resp => resp.json())
-      .then(data => {console.log(data);
+      .then(data => {
         setExperiences(data)})
   },[])
 
@@ -28,8 +28,8 @@ const Experience = () => {
             </div>
           
           {experiences.map(el => {
-            console.log(el);
-            return(<TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="odd" title={el.role_Name} company={el.comp}  st_date={el.stDate} ed_date={el.edDate} />);
+            
+            return(<TimelineCard key={el.id} expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="odd" title={el.role_Name} company={el.comp}  st_date={el.stDate} ed_date={el.edDate} />);
           })}
           {/* <TimelineCard expIcon={<FontAwesomeIcon icon={faSchool} className="expIcon" inverse />}rowType="odd" title="Frontend Developer (Intern)" company="DepEd Biñan City Division Information Office"  respons={['Recreated UI of RMS and main site with the use of frontend language', 'Worked with co-intern designer']} date="April 2022 - July 2022" />
           <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="even" title="Freelance Web Developer" respons={['']} company="Upwork"  date="September 2020 - Present" />
