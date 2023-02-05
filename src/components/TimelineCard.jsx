@@ -1,7 +1,7 @@
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect} from 'react';
-const TimelineCard = ({title, date, company, respons, rowType, expIcon}) => {
+const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon}) => {
 
 
 
@@ -48,15 +48,11 @@ useEffect(() =>{
           
           <div className="experience-header">
               <h3 className="experience-title">{title}</h3>
-              <span className="date">{date}</span>
+              <span className="date">{st_date} - </span>
+              <span className="date">{ed_date}</span>
           </div>
 
           <em className="company">{company}</em>
-              <ul className="duties">
-                {respons.map((el) => {
-                  return(<li>{el}</li>);
-                })}
-              </ul>
           </section>   
 
       </motion.div>
