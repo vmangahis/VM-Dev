@@ -28,15 +28,9 @@ const Experience = () => {
             </div>
           
           {experiences.map((el, ind) => {
-           
             return(<TimelineCard key={el.id} expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType={(ind+1) % 2 == 0 ? "even" : "odd"} title={el.role_Name} company={el.comp}  st_date={el.stDate} ed_date={el.edDate} />);
           })}
-          {/* <TimelineCard expIcon={<FontAwesomeIcon icon={faSchool} className="expIcon" inverse />}rowType="odd" title="Frontend Developer (Intern)" company="DepEd Biñan City Division Information Office"  respons={['Recreated UI of RMS and main site with the use of frontend language', 'Worked with co-intern designer']} date="April 2022 - July 2022" />
-          <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="even" title="Freelance Web Developer" respons={['']} company="Upwork"  date="September 2020 - Present" />
-          <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="odd" title="Freelance Virtual Assistant" respons={['Basic Data Entry tasks', 'Loom video recordings','Daily cryptocurrency transaction tracking','Earned Top Rated badge']} company="Upwork"  date="September 2020 - Present" /> */}
-            
-
-
+                
       </div>
     </div>
   )
