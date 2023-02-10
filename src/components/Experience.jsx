@@ -9,7 +9,7 @@ const Experience = () => {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
-      const url = "https://localhost:7006/api/exp";
+      const url = "http://localhost:8082/api/exp";
      
       fetch(url
         )
