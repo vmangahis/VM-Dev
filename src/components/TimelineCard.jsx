@@ -28,7 +28,7 @@ useEffect(() =>{
   else{
    
     control.start({
-      x: rowType === "odd" ? "-50vw": "50vw"/*"-50vw"*/,
+      x: rowType === "odd" ? "-40vw": "50vw"/*"-50vw"*/,
       opacity: 0
     });
   }
