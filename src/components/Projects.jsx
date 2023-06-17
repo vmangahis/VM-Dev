@@ -11,7 +11,9 @@ const Projects = () => {
 
     fetch(url)
     .then(resp => resp.json())
-    .then(data => setProject(data))
+    .then(data => {
+      
+      setProject(data)})
   }, [])
 
   
