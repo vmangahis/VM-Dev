@@ -7,13 +7,11 @@ const Projects = () => {
   let [projects, setProject] = useState([]);
 
   useEffect(() =>{
-    let url = "https://vmdevapi.up.railway.app/api/projects";
+    let url = "https://localhost:7006/api/Projects";
 
     fetch(url)
     .then(resp => resp.json())
-    .then(data => {
-      
-      setProject(data)})
+    .then(data => setProject(data))
   }, [])
 
   
