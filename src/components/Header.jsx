@@ -1,12 +1,25 @@
-import React, {useState}from 'react';
+import {useState, useEffect}from 'react';
 import Hamburger from './Hamburger';
 import MobileNav from './MobileNav';
 
 
 const Header = () => {
     const [hamburger, toggleHamburger]  = useState(false);
-
+    const [scrollY, setScrollY] = useState(0);
     const [headerColor, changeHeaderColor] = useState(false);
+
+    const scrollFunction = () => {
+        const wndScroll = document.documentElement.scrollTop;
+        const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollProg = (wndScroll/h) * 100;
+
+        setScrollY(scrollProg);
+    }
+
+    useEffect(() =>{
+        window.addEventListener('scroll', scrollFunction);
+        return () => window.removeEventListener('scroll', scrollFunction);       
+    }, []);
 
     const changeColor = () =>{
         if(window.scrollY >= 100)
@@ -23,6 +36,7 @@ const Header = () => {
     window.addEventListener("scroll", changeColor);
 
   return (
+    <>
     <header className={headerColor ? "header scroll" : "header"}>
         <h1 className="logo"><a href="#home">VM</a></h1>
             <MobileNav hamburger_state={hamburger} />
@@ -66,12 +80,11 @@ const Header = () => {
                 </a>
             </li>
             </ul>
-        </nav>
-
-
-      
-
+        </nav> 
+        
     </header>
+    <div className="prog-bar" id="pbar" style={{width : `${scrollY}%`}}></div>
+    </>
   )
 }
 

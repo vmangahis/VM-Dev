@@ -57,16 +57,25 @@ header li{
   font-weight:bold;
 }
 
-
 .header{
   display:flex;
   align-items: center;
   justify-content: space-between;
-  padding:20px;
   position:fixed;
   width:100%;
   z-index:500;
+  padding:20px;
   transition:0.9s;
+}
+
+
+.prog-bar{
+  height: 8px;
+  background-color:var(--font-color);
+  position:fixed;
+  top:90px;
+  z-index:9999;
+  border-radius: 35px;
 }
 
 .header.scroll{
@@ -74,7 +83,6 @@ header li{
   backdrop-filter:blur(1px);
   transition: 0.9s;
 }
-
 
 
 
@@ -207,6 +215,11 @@ header li{
   width:100%;
   margin-top:100px;
   height:100%;
+}
+
+.footer-nav a, .animation > span {
+  color: var(--font-color);
+  font-weight: bold;;
 }
 
 
@@ -493,11 +506,6 @@ outline: none;
   z-index:1; 
   
 }
-
-
-
-
-
 
 .even{
   align-items: flex-end;
