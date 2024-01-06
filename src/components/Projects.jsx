@@ -39,6 +39,36 @@ const Projects = () => {
       <p className="project-name">Kai</p>
       </a>
 
+      <a href="https://github.com/vmangahis/beowulf" className="project-card" style={{ backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/beowulf.png?alt=media&token=547b5150-339c-47e7-82a6-f57d3a7034b9)', backgroundRepeat: 'no-repeat'}}
+      onMouseEnter={(e) => {
+        e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/beowulf.png?alt=media&token=547b5150-339c-47e7-82a6-f57d3a7034b9) no-repeat`
+        e.target.style.backgroundRepeat =  'no-repeat';
+        e.target.style.backgroundSize = 'cover';
+      }}
+      onMouseLeave={(e) =>{
+        e.target.style.background = `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/beowulf.png?alt=media&token=547b5150-339c-47e7-82a6-f57d3a7034b9) no-repeat`
+        e.target.style.backgroundRepeat =  'no-repeat';
+        e.target.style.backgroundSize = 'cover';
+      }}
+      >
+      <p className="project-name">Beowulf</p>
+      </a>
+
+      <a href="https://github.com/vmangahis/Four-Color-Conjecture-Game" className="project-card" style={{ backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/fcc.png?alt=media&token=b74b049e-1f4e-4f4d-a42f-66d1e9cbdc1d)', backgroundRepeat: 'no-repeat'}}
+      onMouseEnter={(e) => {
+        e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/fcc.png?alt=media&token=b74b049e-1f4e-4f4d-a42f-66d1e9cbdc1d) no-repeat`
+        e.target.style.backgroundRepeat =  'no-repeat';
+        e.target.style.backgroundSize = 'cover';
+      }}
+      onMouseLeave={(e) =>{
+        e.target.style.background = `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/fcc.png?alt=media&token=b74b049e-1f4e-4f4d-a42f-66d1e9cbdc1d) no-repeat`
+        e.target.style.backgroundRepeat =  'no-repeat';
+        e.target.style.backgroundSize = 'cover';
+      }}
+      >
+      <p className="project-name">Four Color Conjecture Game</p>
+      </a>
+
     </div>
 
     </div>
