@@ -1,12 +1,4 @@
-import React from 'react'
-
-
-
 const Hamburger = ({hamburger_state,toggle}) => {
-
-  
-
-
   return (
     <button className={hamburger_state ? "hamburger-button active" : "hamburger-button"} onClick={() => {
       toggle(!hamburger_state);
@@ -17,4 +9,4 @@ const Hamburger = ({hamburger_state,toggle}) => {
   )
 }
 
-export default Hamburger
+export default Hamburger;

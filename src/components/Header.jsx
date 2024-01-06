@@ -1,8 +1,6 @@
 import {useState, useEffect}from 'react';
 import Hamburger from './Hamburger';
 import MobileNav from './MobileNav';
-
-
 const Header = () => {
     const [hamburger, toggleHamburger]  = useState(false);
     const [scrollY, setScrollY] = useState(0);
@@ -26,13 +24,10 @@ const Header = () => {
         {
             changeHeaderColor(true);
         }
-
-        else{
+       else{
             changeHeaderColor(false);
-        }
-        
+        }       
     }
-
     window.addEventListener("scroll", changeColor);
 
   return (

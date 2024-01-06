@@ -9,11 +9,9 @@ const About = () => {
             <span className="hero-text-container">
               <p className="hero-text">
                 Hi there, my name is<span className="name">Vince Baron Mangahis</span>
-                your
-
-
+                I am a
                 <span className="animation">
-                 <span className="web-developer">Software Developer</span>
+                 <span className="web-developer">Full-Stack Web Developer</span>
                 </span>   
               </p>
 

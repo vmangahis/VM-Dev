@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2');
 :root{
   --bg-color:#19191F;
    --font-color: #058ED9;
@@ -16,7 +17,7 @@ html{
 *{
   border:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Lato', sans-serif;
   box-sizing: border-box;
   line-height: 50px;
   color:#ffffff;
@@ -39,6 +40,7 @@ textarea{
 
 body{
   background-color: var(--bg-color);
+  
 }
 
 
@@ -265,6 +267,10 @@ header li{
 
 .about-info-text {
   margin-left:50px;
+}
+
+.about-info-text > p {
+  font-size:clamp(15px, 1.1em, 2em);
 }
 
 .experience{

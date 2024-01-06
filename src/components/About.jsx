@@ -1,5 +1,4 @@
 const About = () => {
-
   return (
     <div className="about" id="about">
       <h1>About Me</h1>
@@ -9,12 +8,15 @@ const About = () => {
         
         <div className="about-info-text">
           <p>
-            Hi, my name is Vince Mangahis. I am a web developer from Santa Rosa, Laguna. Solving problems through creation of programs or web applications are one of my hobbies.
+            Enthusiastic in learning new stuffs especially in the field of programming. I'm a full stack web developer focusing mostly in languages like Javascript in the frontend 
+            and Python in the backend while leaning towards in other languages and frameworks like C# and .NET Core. The concept of building ideas into reality and being able to have the 
+            control over it through change is what drives my enthusiasm in programming overall.  
           </p>
           <br />
-          <p>As a programmer, I am eager to learn more skills in my field. Currently I am focusing on building software using Python 
-            along with the needed frameworks like Django.</p>
-
+          <p>
+            I love playing video games. Commonly first person shooters like Rainbow Six Siege, role-playing games like Monster Hunter Series. I also love PC Building which I usually do 
+            whenever I needed to upgrade my workspace/gaming PC for various purposes.
+          </p>
         </div>
         
 
