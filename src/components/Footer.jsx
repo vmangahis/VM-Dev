@@ -1,7 +1,5 @@
-import React from 'react';
 import { IconContext } from "react-icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
 
 const Footer = () => {
   return (
@@ -13,25 +11,21 @@ const Footer = () => {
                             Home
                         </a>
                     </li>
-
                     <li>
                         <a href="#about">
                             About
                         </a>
                     </li>
-
                     <li>
                         <a href="#experience">
                             Experience
                         </a>
                     </li>
-
                     <li>
                         <a href="#projects">
                             Projects
                         </a>
                     </li>
-
                     <li>
                         <a href="#skills">
                             Skills
@@ -39,7 +33,6 @@ const Footer = () => {
                     </li>
                 </ul>
         </nav>
-
         <div className="sites">
         <IconContext.Provider value={{ size: "3em"}}>
             <a href="https://github.com/vmangahis">
@@ -52,7 +45,7 @@ const Footer = () => {
         </IconContext.Provider>
         </div>
 
-        <p className="copyright">&copy; 2023 VMangahis</p>
+        <p className="copyright">&copy; 2024 VMangahis</p>
 
     </footer>
   )

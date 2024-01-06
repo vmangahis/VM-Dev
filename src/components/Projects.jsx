@@ -1,15 +1,16 @@
-import React from 'react'
-
-
+import { useState } from 'react';
 const Projects = () => {
+
+ 
 
   return (
     <div className="projects" id="projects">
+      
     <h1>Projects</h1>
-
+    
     <div className="project-container">
 
-      <a href="https://github.com/vmangahis/apartment-rental-system" className='project-card' style={{ backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/apt.jpg?alt=media&token=3be48125-394f-48b1-8db1-bec6de962a21)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} onMouseEnter={(e) => {
+      <a href="https://github.com/vmangahis/apartment-rental-system"  className='project-card' style={{ backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/apt.jpg?alt=media&token=3be48125-394f-48b1-8db1-bec6de962a21)', backgroundRepeat: 'no-repeat'}} onMouseEnter={(e) => {
         e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/apt.jpg?alt=media&token=3be48125-394f-48b1-8db1-bec6de962a21) no-repeat`
         e.target.style.backgroundRepeat =  'no-repeat';
         e.target.style.backgroundSize = 'cover';
