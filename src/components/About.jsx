@@ -4,7 +4,7 @@ const About = () => {
       <h1>About Me</h1>
 
       <section className="about-info">
-        <img src="https://firebasestorage.googleapis.com/v0/b/vm-dev-fa2be.appspot.com/o/portfolio-photo.JPG?alt=media&token=f72d9c89-b609-430f-a927-fb1dce1f0743" className="about-photo" alt="My portfolio" />
+        <img src="https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/portfolio-photo.JPG?t=2024-01-13T10%3A24%3A41.881Z" className="about-photo" alt="My portfolio" />
         
         <div className="about-info-text">
           <p>

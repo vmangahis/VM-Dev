@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2');
 :root{
   --bg-color:#19191F;
-   --font-color: #058ED9;
+   --font-color: #69e4fa;
   --exp-card-color:#23232c;
 }
 
@@ -27,6 +27,8 @@ html{
   scroll-behavior: smooth;
 }
 
+
+
 a{
   text-decoration: none;
   color:white;
@@ -34,8 +36,7 @@ a{
 
 textarea{
   resize:none;
-}
-
+} 
 
 
 body{
@@ -523,6 +524,7 @@ outline: none;
   padding:50px;
   position: relative;
   border-radius:10px;
+  cursor: pointer;
 }
 
 
