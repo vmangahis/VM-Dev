@@ -1,6 +1,7 @@
 import {useState, useEffect}from 'react';
 import Hamburger from './Hamburger';
 import MobileNav from './MobileNav';
+import logo from '../images/logo.png';
 const Header = () => {
     const [hamburger, toggleHamburger]  = useState(false);
     const [scrollY, setScrollY] = useState(0);
@@ -33,7 +34,7 @@ const Header = () => {
   return (
     <>
     <header className={headerColor ? "header scroll" : "header"}>
-        <h1 className="logo"><a href="#home">VM</a></h1>
+            <a href="#home" className="logo"><img src={logo} /></a>
             <MobileNav hamburger_state={hamburger} />
             <Hamburger toggle={toggleHamburger} hamburger_state={hamburger}/>
        

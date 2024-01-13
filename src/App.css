@@ -53,22 +53,30 @@ li{
 header a {
   text-decoration: none;
   color:var(--font-color);
-  margin: 20px;
+  
 }
 
 header li{
   font-weight:bold;
 }
 
+.logo{
+  display: table;
+}
+
+.logo img{
+  display:table-row;
+}
+
 .header{
+  width:100%;
   display:flex;
   align-items: center;
   justify-content: space-between;
   position:fixed;
-  width:100%;
   z-index:500;
-  padding:20px;
   transition:0.9s;
+  padding:20px;
 }
 
 
@@ -76,7 +84,7 @@ header li{
   height: 8px;
   background-color:var(--font-color);
   position:fixed;
-  top:90px;
+  top:125px;
   z-index:9999;
   border-radius: 35px;
 }
@@ -98,22 +106,22 @@ header li{
 }
 
 
-.navbar{
-  position: fixed;
-  right:0;
-}
+
 
 .animation{
   display:block;
 }
 
 
+.navbar, .hamburger-button{
+  margin-right:50px;
+}
 
 
 
 .navbar > ul{
   display:flex;
-  gap:3%;
+  gap:15%;
   flex:1;
   justify-content: flex-end;
  
