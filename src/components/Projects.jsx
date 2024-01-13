@@ -1,7 +1,22 @@
-import { useState } from 'react';
+import ProjectCards from './ProjectCards';
+import { useState, useEffect } from 'react';
+import { createClient } from '@supabase/supabase-js';
 const Projects = () => {
 
- 
+  const [projects, setProjects] = useState([]);
+  const cl =  createClient(import.meta.env.VITE_API_URL, import.meta.env.VITE_SPB_KEY);
+  const getProjects = async (spbObj) => {
+      const { data, error } = await spbObj
+      .from('vm_projects')
+      .select();
+      return data;
+  }
+
+  useEffect(() =>{
+      getProjects(cl)
+      .then(pr => setProjects(pr));
+  },[]);
+
 
   return (
     <div className="projects" id="projects">
@@ -9,66 +24,12 @@ const Projects = () => {
     <h1>Projects</h1>
     
     <div className="project-container">
-
-      <a href="https://github.com/vmangahis/apartment-rental-system"  className='project-card' style={{ backgroundImage: 'url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/apt.jpg)', backgroundRepeat: 'no-repeat'}} onMouseEnter={(e) => {
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/apt.jpg) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      onMouseLeave={(e) =>{
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/apt.jpg) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      >
-      <p className="project-name">Apartment Rental Management System</p>
-      </a>
-
-
-      <a href="https://github.com/vmangahis/Kai" className="project-card" style={{ backgroundImage: 'url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/kai.PNG?t=2024-01-13T10%3A23%3A56.121Z)', backgroundRepeat: 'no-repeat'}}
-      onMouseEnter={(e) => {
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/kai.PNG?t=2024-01-13T10%3A23%3A56.121Z) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      onMouseLeave={(e) =>{
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/kai.PNG?t=2024-01-13T10%3A23%3A56.121Z) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      >
-      <p className="project-name">Kai</p>
-      </a>
-
-      <a href="https://github.com/vmangahis/beowulf" className="project-card" style={{ backgroundImage: 'url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/beowulf.png)', backgroundRepeat: 'no-repeat'}}
-      onMouseEnter={(e) => {
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/beowulf.png) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      onMouseLeave={(e) =>{
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/beowulf.png) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      >
-      <p className="project-name">Beowulf</p>
-      </a>
-
-      <a href="https://github.com/vmangahis/Four-Color-Conjecture-Game" className="project-card" style={{ backgroundImage: 'url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/fcc.png?t=2024-01-13T10%3A24%3A24.817Z)', backgroundRepeat: 'no-repeat'}}
-      onMouseEnter={(e) => {
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/fcc.png?t=2024-01-13T10%3A24%3A24.817Z) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      onMouseLeave={(e) =>{
-        e.target.style.background = `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/fcc.png?t=2024-01-13T10%3A24%3A24.817Z) no-repeat`
-        e.target.style.backgroundRepeat =  'no-repeat';
-        e.target.style.backgroundSize = 'cover';
-      }}
-      >
-      <p className="project-name">Four Color Conjecture Game</p>
-      </a>
+          {projects.map(({imglink, prjlink, prjname}) => {
+              return(
+                  <ProjectCards imglink={imglink} prname={prjname} prlink={prjlink} />
+                );
+          })}
+     
 
     </div>
 
