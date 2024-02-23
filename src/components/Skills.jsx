@@ -7,12 +7,9 @@ const Skills = () => {
 
   const languages = [
     {skill :  'django', },
-    {skill :  'laravel', },
     {skill:  'react', },
     {skill:  'bootstrap', },
-    {skill :  'jquery', },
     {skill: 'dotnet'}
-    
 ]
 
 
