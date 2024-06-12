@@ -1,9 +1,7 @@
-import React from 'react'
-
-const Button = ({button, buttonText}) => {
+const Button = ({button,behavior ,buttonText}) => {
   return (
     <>
-        <button className={button}>{buttonText}</button>
+        <button className={button} onClick={behavior ? behavior : ''}>{buttonText}</button>
     </>
   )
 }

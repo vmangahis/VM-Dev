@@ -10,10 +10,8 @@ const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon}) => {
     threshold: 0.4
   });
 
-useEffect(() =>{
-  
+useEffect(() =>{ 
   if(inView){
-    
     control.start({
       x: 0,
       opacity:1,
@@ -26,9 +24,8 @@ useEffect(() =>{
   }
 
   else{
-   
     control.start({
-      x: rowType === "odd" ? "-50vw": "10vw"/*"-50vw"*/,
+      x: rowType === "odd" ? "-50vw": "10vw",
       opacity: 0
     });
   }

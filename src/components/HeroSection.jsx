@@ -2,6 +2,9 @@ import React from 'react';
 import {ReactComponent as DevSVG} from '../images/web-dev.svg';
 import Button from './Button';
 
+const goToContact = () => {
+  document.getElementById('contact').scrollIntoView({behavior : 'smooth'})
+}
 
 const About = () => {
   return (
@@ -15,7 +18,7 @@ const About = () => {
                 </span>   
               </p>
 
-              <Button button="hero-button" buttonText="Contact me"/> 
+              <Button button="hero-button" behavior={goToContact}  buttonText="Contact me"/> 
             </span>
               
             <div className="svg-hero">
