@@ -390,11 +390,11 @@ header li{
 }
 
 
-.email-input{
+.email-input, .name-input{
   font-size:1.2rem;
 }
 
-.email-body{
+.email-body, .text-body{
   font-size:1rem;
   line-height:15px;
   height:200px;
