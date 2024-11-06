@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     outDir: './build'
   },
-  base: '/vm-dev/',
+  base: '/VM-Dev/',
   server: {
     port: 4200,
     open: true,
