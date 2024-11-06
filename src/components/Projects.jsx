@@ -1,21 +1,13 @@
 import ProjectCards from './ProjectCards';
 import { useState, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js';
 const Projects = () => {
 
   const [projects, setProjects] = useState([]);
-  const cl =  createClient(import.meta.env.VITE_API_URL, import.meta.env.VITE_SPB_KEY);
-  const getProjects = async (spbObj) => {
-      const { data, error } = await spbObj
-      .from('vm_projects')
-      .select();
-      return data;
-  }
-
-  useEffect(() =>{
-      getProjects(cl)
-      .then(pr => setProjects(pr));
-  },[]);
+  const proj = [{imglink : '', prjname: 'Apartment Rental Management SystemApartment Rental Management System', prjlink: 'https://github.com/vmangahis/apartment-rental-system'},
+    {imglink : '', prjname: 'Apartment Rental Management SystemApartment Rental Management System', prjlink: 'https://github.com/vmangahis/apartment-rental-system'},
+    {imglink : '', prjname: 'Apartment Rental Management SystemApartment Rental Management System', prjlink: 'https://github.com/vmangahis/apartment-rental-system'},
+    {imglink : '', prjname: 'Apartment Rental Management SystemApartment Rental Management System', prjlink: 'https://github.com/vmangahis/apartment-rental-system'}
+  ];
 
 
   return (
@@ -24,7 +16,7 @@ const Projects = () => {
     <h1>Projects</h1>
     
     <div className="project-container">
-          {projects.map(({imglink, prjlink, prjname}) => {
+          {proj.map(({imglink, prjlink, prjname}) => {
               return(
                   <ProjectCards imglink={imglink} prname={prjname} prlink={prjlink} />
                 );
