@@ -1,10 +1,11 @@
+
 const About = () => {
   return (
     <div className="about" id="about">
       <h1>About Me</h1>
 
       <section className="about-info">
-        <img src="https://csqpvkwecmbobrlaxnrw.supabase.co/storage/v1/object/public/vm-dev/portfolio-photo.JPG?t=2024-01-13T10%3A24%3A41.881Z" className="about-photo" alt="My portfolio" />
+        <img src="https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954822/vmdev/portfolio-photo_sn93jo.jpg" className="about-photo" alt="My portfolio" />
         
         <div className="about-info-text">
           <p>
