@@ -1,7 +1,15 @@
-const Button = ({button,behavior ,buttonText}) => {
+import {FC} from "react";
+
+interface Button{
+  button: string;
+  behavior : () => void; 
+  buttonText: string;
+}
+
+const Button: FC<Button> = ({button,behavior ,buttonText}) => {
   return (
     <>
-        <button className={button} onClick={behavior ? behavior : ''}>{buttonText}</button>
+        <button className={button} onClick={behavior}>{buttonText}</button>
     </>
   )
 }

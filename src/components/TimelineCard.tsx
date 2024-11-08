@@ -1,13 +1,23 @@
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect} from 'react';
-import React from "react";
+import React,{FC, ReactNode, useEffect} from 'react';
 
-const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon}) => {
+interface TimelineCard {
+    title: number;
+    st_date: string;
+    ed_date: string;
+    company: string;
+    rowType : string;
+    expIcon: ReactNode;
+};
 
 
 
-  const control = useAnimation();
+const TimelineCard : FC<TimelineCard> = ({title, st_date, ed_date, company, rowType, expIcon}) => {
+
+
+
+  const control  = useAnimation();
   const {ref, inView} = useInView({
     threshold: 0.4
   });
