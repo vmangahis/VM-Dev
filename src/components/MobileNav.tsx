@@ -1,3 +1,5 @@
+import React from "react";
+
 const MobileNav = ({hamburger_state}) => {
   return (
     <nav className={hamburger_state ? "mobile-nav active" : "mobile-nav"}>

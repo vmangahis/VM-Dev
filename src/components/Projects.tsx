@@ -1,5 +1,7 @@
 import ProjectCards from './ProjectCards';
 import { useState, useEffect } from 'react';
+import React from "react";
+
 const Projects = () => {
 
 const proj = [{imglink : 'https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/apt_jd51xf.png', prjname: 'Apartment Rental Management SystemApartment Rental Management System', prjlink: 'https://github.com/vmangahis/apartment-rental-system'},

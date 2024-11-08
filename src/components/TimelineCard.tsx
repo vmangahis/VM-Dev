@@ -1,6 +1,8 @@
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect} from 'react';
+import React from "react";
+
 const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon}) => {
 
 

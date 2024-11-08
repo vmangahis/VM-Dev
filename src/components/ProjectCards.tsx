@@ -1,3 +1,5 @@
+import React from "react";
+
 function ProjectCards({imglink, prname, prlink}) {
   const defStyle = {
     backgroundImage : `url(${imglink})`,
@@ -13,14 +15,16 @@ function ProjectCards({imglink, prname, prlink}) {
   return (
         <>
         <a href={prlink} className="project-card" style={defStyle} onMouseEnter={(e) => {
-          e.target.style.background = enterBgStyle;
-          e.target.style.backgroundRepeat = 'no-repeat';
-          e.target.style.backgroundSize = 'cover';
+          const element = e.target as HTMLInputElement
+          element.style.background = enterBgStyle;
+          element.style.backgroundRepeat = 'no-repeat';
+          element.style.backgroundSize = 'cover';
         }}
           onMouseLeave={(e) => {
-            e.target.style.background = leaveBgStyle;
-            e.target.style.backgroundRepeat = 'no-repeat';
-            e.target.style.backgroundSize = 'cover';
+            const element = e.target as HTMLInputElement;
+            element.style.background = leaveBgStyle;
+            element.style.backgroundRepeat = 'no-repeat';
+            element.style.backgroundSize = 'cover';
           }}
         >
             <p className="project-name">{prname}</p>

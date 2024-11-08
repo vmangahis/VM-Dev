@@ -7,6 +7,8 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+import React from "react";
+
 import './App.css';
 
 function App() {

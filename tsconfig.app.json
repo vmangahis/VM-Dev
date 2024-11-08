@@ -19,5 +19,5 @@
     "**/*.jsx",
     "**/*.ts",
     "**/*.tsx"
-  ]
+, "src/components/Footer.tsx"  ]
 }
