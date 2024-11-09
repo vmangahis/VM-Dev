@@ -1,19 +1,9 @@
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import React,{FC, ReactNode, useEffect} from 'react';
-
-interface TimelineCard {
-    title: number;
-    st_date: string;
-    ed_date: string;
-    company: string;
-    rowType : string;
-    expIcon: ReactNode;
-};
+import {useEffect, ReactNode} from 'react';
 
 
-
-const TimelineCard : FC<TimelineCard> = ({title, st_date, ed_date, company, rowType, expIcon}) => {
+const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon} : {title: string, st_date: string, ed_date: string, company: string, rowType: string, expIcon: ReactNode}) => {
 
 
 

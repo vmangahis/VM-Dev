@@ -1,7 +1,6 @@
 import TimelineCard from "./TimelineCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBusinessTime, faSchool } from '@fortawesome/free-solid-svg-icons';
-import React from "react";
 
 const Experience = () => {
   return (

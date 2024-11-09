@@ -1,6 +1,5 @@
-import React from "react";
 
-const Hamburger = ({hamburger_state,toggle}) => {
+const Hamburger = ({hamburger_state,toggle} : {hamburger_state: boolean, toggle: (arg0: boolean) => void}) => {
   return (
     <button className={hamburger_state ? "hamburger-button active" : "hamburger-button"} onClick={() => {
       toggle(!hamburger_state);
