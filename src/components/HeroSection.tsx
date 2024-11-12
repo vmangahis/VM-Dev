@@ -1,9 +1,8 @@
-import React from 'react';
 import {ReactComponent as DevSVG} from '../images/web-dev.svg';
 import Button from './Button';
 
 const goToContact = () => {
-  document.getElementById('contact').scrollIntoView({behavior : 'smooth'})
+  document.getElementById('contact')?.scrollIntoView({behavior : 'smooth'})
 }
 
 const About = () => {

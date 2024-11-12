@@ -1,14 +1,31 @@
 import ProjectCards from './ProjectCards';
-import { useState, useEffect } from 'react';
-import React from "react";
+import {useEffect, useState} from 'react';
+
+interface ProjectObject {
+  projectLink: string;
+  imageLink: string;
+  projectName: string;
+}
 
 const Projects = () => {
 
-const proj = [{imglink : 'https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/apt_jd51xf.png', prjname: 'Apartment Rental Management SystemApartment Rental Management System', prjlink: 'https://github.com/vmangahis/apartment-rental-system'},
-    {imglink : 'https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954839/vmdev/kai_gb2jzi.png', prjname: 'Kai', prjlink: 'https://github.com/vmangahis/Kai'},
-    {imglink : 'https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954822/vmdev/beowulf_tfac0o.png', prjname: 'Beowulf', prjlink: 'https://github.com/vmangahis/beowulf'},
-    {imglink : 'https://res.cloudinary.com/dg1bym3ax/image/upload/v1730954820/vmdev/fcc_bi4o7r.png', prjname: 'Four Color Conjecture Game', prjlink: 'https://github.com/vmangahis/Four-Color-Conjecture-Game'}
-  ];
+const [projects, setProjects] = useState<ProjectObject[]>([]);
+useEffect(() => {
+  const fetchProjects = async() =>{
+      try{
+        const resp = await fetch("https://vmdevserver.azurewebsites.net/api/vm/projects");
+        if(!resp.ok){
+          throw new Error("Error!");
+        }
+        var respData =  await resp.json();
+        setProjects(respData);
+      }
+      catch(err){
+          console.log(err);
+      }
+  };
+  fetchProjects();
+}, []);
 
 
   return (
@@ -17,9 +34,9 @@ const proj = [{imglink : 'https://res.cloudinary.com/dg1bym3ax/image/upload/v173
     <h1>Projects</h1>
     
     <div className="project-container">
-          {proj.map(({imglink, prjlink, prjname}) => {
+          {projects.map(({imageLink, projectLink, projectName}) => {
               return(
-                  <ProjectCards imglink={imglink} prname={prjname} prlink={prjlink} />
+                  <ProjectCards imglink={imageLink} prname={projectName} prlink={projectLink} />
                 );
           })}
      

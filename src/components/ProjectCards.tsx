@@ -1,6 +1,4 @@
-import React from "react";
-
-function ProjectCards({imglink, prname, prlink}) {
+function ProjectCards({imglink, prname, prlink} : {imglink: string, prname: string, prlink: string}){
   const defStyle = {
     backgroundImage : `url(${imglink})`,
     backgroundRepeat: 'no-repeat'

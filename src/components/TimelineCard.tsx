@@ -1,13 +1,13 @@
 import {motion, useAnimation} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useEffect} from 'react';
-import React from "react";
-
-const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon}) => {
+import {useEffect, ReactNode} from 'react';
 
 
+const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon} : {title: string, st_date: string, ed_date: string, company: string, rowType: string, expIcon: ReactNode}) => {
 
-  const control = useAnimation();
+
+
+  const control  = useAnimation();
   const {ref, inView} = useInView({
     threshold: 0.4
   });
@@ -47,7 +47,7 @@ useEffect(() =>{
           
           <div className="experience-header">
               <h3 className="experience-title">{title}</h3>
-              <span className="date">{st_date} - </span>
+              <span className="date">{st_date.toString()} - </span>
               <span className="date">{ed_date}</span>
           </div>
 

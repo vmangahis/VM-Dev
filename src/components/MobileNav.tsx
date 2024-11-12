@@ -1,6 +1,4 @@
-import React from "react";
-
-const MobileNav = ({hamburger_state}) => {
+const MobileNav = ({hamburger_state} : {hamburger_state: boolean}) => {
   return (
     <nav className={hamburger_state ? "mobile-nav active" : "mobile-nav"}>
         <ul>

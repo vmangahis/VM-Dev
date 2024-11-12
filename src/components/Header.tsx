@@ -1,4 +1,4 @@
-import React ,{useState, useEffect}from 'react';
+import {useState, useEffect}from 'react';
 import Hamburger from './Hamburger';
 import MobileNav from './MobileNav';
 import logo from '../images/logo.png';
