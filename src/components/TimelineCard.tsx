@@ -47,7 +47,7 @@ useEffect(() =>{
           
           <div className="experience-header">
               <h3 className="experience-title">{title}</h3>
-              <span className="date">{st_date} - </span>
+              <span className="date">{st_date.toString()} - </span>
               <span className="date">{ed_date}</span>
           </div>
 

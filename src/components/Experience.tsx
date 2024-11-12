@@ -1,8 +1,47 @@
 import TimelineCard from "./TimelineCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBusinessTime, faSchool } from '@fortawesome/free-solid-svg-icons';
+import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from "react";
 
 const Experience = () => {
+
+  type ExperiencesObject = {
+      rowType : string;
+      roleName: string;
+      company: string;
+      st_date : Date;
+      endDate: Date;
+      startDate : Date
+      st_date_format: string;
+      ed_date_format: string;
+  };
+
+  let [experiences, setExperiences] = useState<ExperiencesObject[]>([]);
+
+  useEffect(() => {
+    const formatDate = (experienceParam : ExperiencesObject[]) : void => {
+        experienceParam.forEach(val => {
+          let start_date = new Date(val.startDate);
+          let end_date = new Date(val.endDate);
+          let end_month = end_date.toLocaleDateString('default', {month : 'long'});
+          let smonth = start_date.toLocaleDateString('default', {month : 'long'});
+          val.ed_date_format = end_month + " " + end_date.getFullYear();
+          val.st_date_format = smonth + " " + start_date.getFullYear();
+        });
+    }
+    const fetchExperiences = async () => {
+        const exp = await fetch("https://vmdevserver.azurewebsites.net/api/vm/experiences");
+        if(!exp.ok){
+          console.log("Error fetching experiences!");
+        }
+        let expData : ExperiencesObject[] = await exp.json();
+        formatDate(expData);
+        setExperiences(expData);
+        
+    }
+    fetchExperiences();
+  }, []);
+
   return (
     <div className="experience" id="experience">
       <h1>Experience</h1>
@@ -10,11 +49,9 @@ const Experience = () => {
       <div className="experience-timeline">
             <div className="timeline-line">
             </div>       
-          <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="even" title="Software Engineer"  company="Infor PSSC Inc."  st_date="June 2024" ed_date="Present" /> 
-          <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="odd" title="Associate Software Engineer" company="Infor PSSC Inc."  st_date="February 2023" ed_date="June 2024" /> 
-          <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="even" title="Freelance Web Developer" company="Upwork"  st_date="September 2020" ed_date="January 2023" />
-          <TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType="odd" title="Freelance Virtual Assistant" company="Upwork"  st_date="September 2020" ed_date="January 2023" /> 
-          <TimelineCard expIcon={<FontAwesomeIcon icon={faSchool} className="expIcon" inverse />}rowType="even" title="Frontend Developer (Intern)" company="DepEd Biñan City Division Information Office" st_date="April 2022" ed_date="July 2022" />
+            {experiences.map((val, index) => {
+            return(<TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType={(index % 2 == 0) ? "even" : "odd"} title={val.roleName} company={val.company} st_date={val.st_date_format} ed_date={val.ed_date_format} />);
+          })}
       </div>
     </div>
   )

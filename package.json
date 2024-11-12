@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "dev" : "vite",
     "start": "nx exec -- vite",
     "serve": "nx exec -- vite",
     "build": "nx exec -- vite build",
@@ -51,7 +52,7 @@
     "react-test-renderer": "18.2.0",
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
-    "typescript": "~4.8.2",
+    "typescript": "^5.6.3",
     "url-loader": "^4.1.1",
     "vite": "^4.1.1",
     "vitest": "^0.28.4",
