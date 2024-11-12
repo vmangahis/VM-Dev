@@ -7,9 +7,7 @@
 
 html{
   overflow: scroll;
-}
-
-body{
+  overflow-x: hidden; 
   min-height:100vh;
 }
 
