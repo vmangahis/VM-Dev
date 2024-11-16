@@ -22,11 +22,19 @@ const Experience = () => {
     const formatDate = (experienceParam : ExperiencesObject[]) : void => {
         experienceParam.forEach(val => {
           let start_date = new Date(val.startDate);
-          let end_date = new Date(val.endDate);
-          let end_month = end_date.toLocaleDateString('default', {month : 'long'});
           let smonth = start_date.toLocaleDateString('default', {month : 'long'});
-          val.ed_date_format = end_month + " " + end_date.getFullYear();
           val.st_date_format = smonth + " " + start_date.getFullYear();
+
+          if(val.endDate != null){
+            let end_date = new Date(val.endDate);
+            let end_month = end_date.toLocaleDateString('default', {month : 'long'});
+          
+            val.ed_date_format = end_month + " " + end_date.getFullYear();
+          }
+          else{
+            val.ed_date_format = "Present";
+          }
+          
         });
     }
     const fetchExperiences = async () => {
