@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2');
 :root{
-  --bg-color:#19191F;
-   --font-color: #69e4fa;
-  --exp-card-color:#23232c;
+  --bg-color:#0D111D;
+   --font-color: #4990f9;
+   --header-color-blur : #0d111db4;
+  --exp-card-color:#192640;
 }
 
 html{
@@ -60,10 +61,12 @@ header a {
 
 header li{
   font-weight:bold;
+  font-size: 1.3em;
 }
 
 .logo{
   display: table;
+  padding-top: 20px;
 }
 
 .logo img{
@@ -78,6 +81,7 @@ header li{
   position:fixed;
   z-index:500;
   transition:0.9s;
+  max-height: 120px;
   padding:20px;
 }
 
@@ -92,7 +96,7 @@ header li{
 }
 
 .header.scroll{
-  background:rgba(25,25,31,0.9);
+  background: var(--header-color-blur);
   backdrop-filter:blur(1px);
   transition: 0.9s;
 }
@@ -489,7 +493,7 @@ outline: none;
   position:absolute;
   
   
-  background-color: #19191F;
+  background-color: var(--bg-color);
   content:'';
   left:0;
   
@@ -515,19 +519,12 @@ outline: none;
 
 
 .experience-card{
-  margin-bottom:35px;
   display: flex;
   flex-direction: column; 
   padding:50px;
   position:relative;
-  z-index:1; 
-  
+  z-index:1;   
 }
-
-.even{
-  align-items: flex-end;
-}
-
 .experience-card > section{
   width: calc(50% - 40px);
   background-color: var(--exp-card-color);
@@ -538,33 +535,18 @@ outline: none;
 }
 
 
-
-.even{
-  justify-content: flex-end;
-
-  
-}
-
-.odd{
-  justify-content: flex-start;
-
-}
-
-
-
-
 .odd > section::before, .even > section::before{
   position:absolute;
-  width:20px;
-  height:20px;
+  width:5%;
+  height:5%;
   content:'';
-  top:30px;
+  top:15%;
   bottom:0;
   background-color: var(--exp-card-color);
   transform:rotate(-45deg);
   z-index:-10;
-  
 }
+
 
 .even > section::before{
   left:-8px;
@@ -582,39 +564,40 @@ outline: none;
 .expIcon{
   position: absolute;
   content: '';
-  top:10px;
+  top:65px;
   border:2px solid #ffffff;
   padding:10px;
-  background-color: #19191F ;
-
+  background-color: #19191F;
   border-radius: 35px;
   height:auto;
   right:-75px;
   max-width:35px;
-  bottom:0;
+  left:48%;
   
 }
+
+.experience-card-container{
+  position: relative;
+}
+
+.odd{
+  justify-content: flex-start;
+  margin-right: auto;
+  text-align: right;
+
+}
+.even{
+  justify-content: flex-end;
+  margin-left:auto;
+  text-align:left;
+  align-items: flex-end;
+}
+
 
 .even > section  > .expIcon{
   right:0;
   left:-70px;
 }
-
-
-
-
-
-
-
-
-
-.even{
-  margin-left:auto;
-  text-align:left;
-}
-
-
-
 
 
 
@@ -699,7 +682,7 @@ outline: none;
   }
 }
 
-@media(max-width:800px){
+@media(max-width:1076px){
   
   .hamburger-button{
     display:block;
@@ -800,7 +783,7 @@ outline: none;
   align-items: center;
  }
 
- .experience-card{
+ .experience-card-wrapper{
     font-size:clamp(15px, 1.1em, 2em);
     position: relative;
  }

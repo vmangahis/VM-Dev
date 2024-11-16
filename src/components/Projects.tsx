@@ -13,7 +13,7 @@ const [projects, setProjects] = useState<ProjectObject[]>([]);
 useEffect(() => {
   const fetchProjects = async() =>{
       try{
-        const resp = await fetch("https://vmdevserver.azurewebsites.net/api/vm/projects");
+        const resp = await fetch("https://localhost:7226/api/vm/projects");
         if(!resp.ok){
           throw new Error("Error!");
         }
