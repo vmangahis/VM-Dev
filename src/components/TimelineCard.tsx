@@ -60,6 +60,8 @@ useEffect(() =>{
       animate={control}
       ref={ref}>
           <section>
+          <motion.div animate={iconControl} className={rowType === "odd" ? "expIcon icon-odd" : "expIcon icon-even"}>{expIcon}</motion.div>
+
           <div className="experience-header">
               <h3 className="experience-title">{title}</h3>
               <span className="date">{st_date} - </span>
@@ -67,9 +69,7 @@ useEffect(() =>{
           </div>
           <em className="company">{company}</em>
           </section>
-
           </motion.div>   
-          <motion.div animate={iconControl}>{expIcon}</motion.div>
           </div>
       </>
   )

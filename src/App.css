@@ -288,36 +288,20 @@ header li{
   font-size:clamp(15px, 1.1em, 2em);
 }
 
-.experience{
-  padding:20px;
-  width:75%;
+/* Experience Component */
+
+.experience-timeline{
+  position: relative;
 }
 
-
-
-
-
-
-.experience-table{
-  display:flex;
-  flex-direction: column;
-  gap:50px;
-  
-}
-
-
-
-
-
-.experience-table > div {
-  display:flex;
-  justify-content: space-between;
-  
-}
-
-
-.experience-date{
-  font-size:1.2rem;
+.timeline-line{
+  position: absolute;
+  height:100%;
+  width: 4px;
+  background: var(--font-color);
+  left:50%;
+  top:20px;
+  transform: translateX(-50%);
 }
 
 .experience-title{
@@ -325,11 +309,77 @@ header li{
   color: var(--font-color);
 }
 
+ .experience-card{
+  position: relative;
+  display:flex;
+
+}
+
+.experience-card section{
+  background: var(--exp-card-color);
+  border-radius: 15px;
+  width: calc(50% - 40px);
+  padding: 50px;
+  position: relative;
+}
+
+.experience-card section::before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: var(--exp-card-color);
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+.odd section::before{
+  right:-7px;
+}
+
+.even section::before{
+  left: -7px;
+}
+
+.odd{
+  justify-content: flex-start;
+}
+
+.even{
+  justify-content: flex-end;
+}
+
+
 .company{
   font-style:italic;
 }
 
+.expIcon{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 17px;
+}
+.icon-even{
+  top:15px;
+  left:-58px;
+}
 
+.icon-odd{
+  top:15px;
+  right:-61px;
+}
+
+
+.experience-card-container{
+  position: relative;
+}
+
+/* Project */
 
 .project-container{
   display:flex;
@@ -507,129 +557,6 @@ outline: none;
 }
 
 
-.experience-timeline{
-  position: relative;
-  width:100%;
-  
-}
-
-
-
-
-
-
-.experience-card{
-  display: flex;
-  flex-direction: column; 
-  padding:50px;
-  position:relative;
-  z-index:1;   
-}
-.experience-card > section{
-  width: calc(50% - 40px);
-  background-color: var(--exp-card-color);
-  padding:50px;
-  position: relative;
-  border-radius:10px;
-  cursor: pointer;
-}
-
-
-.odd > section::before, .even > section::before{
-  position:absolute;
-  width:5%;
-  height:5%;
-  content:'';
-  top:15%;
-  bottom:0;
-  background-color: var(--exp-card-color);
-  transform:rotate(-45deg);
-  z-index:-10;
-}
-
-
-.even > section::before{
-  left:-8px;
-}
-
-.odd > section::before{
-  right:-7px;
-}
-
-
-.expIcon > path{
-  fill:var(--font-color);
-}
-
-.expIcon{
-  position: absolute;
-  content: '';
-  top:65px;
-  border:2px solid #ffffff;
-  padding:10px;
-  background-color: #19191F;
-  border-radius: 35px;
-  height:auto;
-  right:-75px;
-  max-width:35px;
-  left:48%;
-  
-}
-
-.experience-card-container{
-  position: relative;
-}
-
-.odd{
-  justify-content: flex-start;
-  margin-right: auto;
-  text-align: right;
-
-}
-.even{
-  justify-content: flex-end;
-  margin-left:auto;
-  text-align:left;
-  align-items: flex-end;
-}
-
-
-.even > section  > .expIcon{
-  right:0;
-  left:-70px;
-}
-
-
-
-
-.timeline-line{
-  content:'';
-  width:2px;
-
-  background: var(--font-color);
-  position: absolute;
-  top:0;
-  left:50%;
-  bottom:0;
-  height:auto;
-  border-radius:50px;
-  
-}
-
-
-
-
-
-
-@keyframes expcard-odd{
-  0%{
-
-  }
-}
-
-
-
-
 @keyframes typewriter{
 
   0%{
@@ -788,10 +715,6 @@ outline: none;
     position: relative;
  }
 
- .even > section  > .expIcon{
-  right:0;
-  left:-90px;
-}
 
 
 

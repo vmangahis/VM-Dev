@@ -58,7 +58,7 @@ const Experience = () => {
             <div className="timeline-line">
             </div>       
             {experiences.map((val, index) => {
-            return(<TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime} className="expIcon" inverse />} rowType={(index % 2 != 0) ? "even" : "odd"} title={val.roleName} company={val.company} st_date={val.st_date_format} ed_date={val.ed_date_format} />);
+            return(<TimelineCard expIcon={<FontAwesomeIcon icon={faBusinessTime}  inverse />} rowType={(index % 2 != 0) ? "even" : "odd"} title={val.roleName} company={val.company} st_date={val.st_date_format} ed_date={val.ed_date_format} />);
           })}
       </div>
     </div>
