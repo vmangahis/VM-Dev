@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev" : "vite",
+    "dev": "vite",
     "start": "nx exec -- vite",
     "serve": "nx exec -- vite",
     "build": "nx exec -- vite build",
@@ -15,12 +15,12 @@
   "private": true,
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
-    "@nrwl/eslint-plugin-nx": "15.6.3",
-    "@nrwl/js": "15.6.3",
+    "@nrwl/eslint-plugin-nx": "^15.9.7",
+    "@nrwl/js": "^15.9.7",
     "@nrwl/linter": "15.6.3",
     "@nrwl/nx-cloud": "latest",
-    "@nrwl/react": "15.6.3",
-    "@nrwl/webpack": "15.6.3",
+    "@nrwl/react": "^15.9.7",
+    "@nrwl/webpack": "^15.9.7",
     "@nrwl/workspace": "15.6.3",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@svgr/webpack": "^6.1.2",
@@ -34,7 +34,7 @@
     "@typescript-eslint/parser": "^5.36.1",
     "@vitejs/plugin-react": "^3.1.0",
     "babel-jest": "28.1.1",
-    "cypress": "^12.2.0",
+    "cypress": "^13.16.1",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-config-react-app": "^7.0.1",
@@ -70,6 +70,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-intersection-observer": "^9.4.1",
+    "react-simple-typewriter": "^5.0.1",
     "tslib": "^2.3.0",
     "vite-plugin-svgr": "^2.4.0"
   }

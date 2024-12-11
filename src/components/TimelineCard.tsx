@@ -7,7 +7,7 @@ const TimelineCard = ({title, st_date, ed_date, company, rowType, expIcon} : {ti
 
 
 
-  const control  = useAnimation();
+  const control   = useAnimation();
   const iconControl = useAnimation();
   const {ref, inView} = useInView({
     threshold: 0.4
@@ -28,6 +28,7 @@ useEffect(() =>{
     iconControl.start({
       opacity:1,
       transition:{
+        delay: .7,
         type: 'spring',
         duration: 1,
         bounce: 0.3
@@ -44,23 +45,20 @@ useEffect(() =>{
     });
 
     iconControl.start({
-      opacity: 0
+      opacity: 0,
     });
   }
-
-  
-  
 }, [inView, control, rowType])
 
 
   return (
     <>
       <div className="experience-card-container">
-      <motion.div className={rowType === "odd" ? "experience-card odd" : "experience-card even"}    
+          <motion.div className={rowType === "odd" ? "experience-card odd" : "experience-card even"}    
       animate={control}
       ref={ref}>
           <section>
-          <motion.div animate={iconControl} className={rowType === "odd" ? "expIcon icon-odd" : "expIcon icon-even"}>{expIcon}</motion.div>
+          <motion.div animate={iconControl} className={rowType === "odd" ? "expIcon icon-odd" : "expIcon icon-even"}>{expIcon}</motion.div>   
 
           <div className="experience-header">
               <h3 className="experience-title">{title}</h3>
@@ -69,8 +67,8 @@ useEffect(() =>{
           </div>
           <em className="company">{company}</em>
           </section>
-          </motion.div>   
-          </div>
+          </motion.div>
+      </div>
       </>
   )
 }
