@@ -1,17 +1,17 @@
-import {FC} from "react";
-
-interface Button{
+interface Props {
   button: string;
-  behavior : () => void; 
+  behavior: () => void;
   buttonText: string;
 }
 
-const Button: FC<Button> = ({button,behavior ,buttonText}) => {
+const Button = ({ button, behavior, buttonText }: Props) => {
   return (
     <>
-        <button className={button} onClick={behavior}>{buttonText}</button>
+      <button className={button} onClick={behavior}>
+        {buttonText}
+      </button>
     </>
-  )
-}
+  );
+};
 
 export default Button;
