@@ -1,7 +1,6 @@
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect, ReactNode } from 'react';
-import WindowDimensions from '../hooks/WindowDimensions';
+import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
+import useTimelinecardAnimation from '../hooks/useTimelineCardAnimation';
 
 const TimelineCard = ({
   title,
@@ -18,51 +17,7 @@ const TimelineCard = ({
   rowType: string;
   expIcon: ReactNode;
 }) => {
-  const control = useAnimation();
-  const iconControl = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.4,
-  });
-  const { width } = WindowDimensions();
-
-  useEffect(() => {
-    if (inView) {
-      control.start({
-        x: 0,
-        opacity: 1,
-        transition: {
-          type: 'spring',
-          duration: 1,
-          bounce: 0.1,
-        },
-      });
-
-      iconControl.start({
-        opacity: 1,
-        transition: {
-          delay: 0.7,
-          type: 'spring',
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    } else {
-      if (width >= 900) {
-        control.start({
-          x: rowType === 'odd' ? '-20vw' : '10vw',
-          opacity: 0,
-        });
-      } else {
-        control.start({
-          x: '10vw',
-          opacity: 0,
-        });
-      }
-      iconControl.start({
-        opacity: 0,
-      });
-    }
-  }, [inView, control, rowType]);
+  const { control, ref, iconControl } = useTimelinecardAnimation(rowType);
 
   return (
     <>
