@@ -59,7 +59,7 @@ header li {
 
 .logo {
   display: table;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .logo img {
