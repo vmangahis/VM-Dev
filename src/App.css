@@ -85,7 +85,7 @@ header li {
   height: 8px;
   background-color: var(--font-color);
   position: fixed;
-  top: 125px;
+  top: 120px;
   z-index: 9999;
   border-radius: 35px;
 }
