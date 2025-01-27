@@ -9,7 +9,6 @@ export default defineConfig({
   base: '/VM-Dev/',
   server: {
     port: 4200,
-    open: true,
     cors: true,
   },
   test: {
