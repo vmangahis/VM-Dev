@@ -2,6 +2,7 @@ import { IconContext } from "react-icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+    let d : Date = new Date();
   return (
     <footer className="footer">
         <nav className="footer-nav">
@@ -45,7 +46,7 @@ const Footer = () => {
         </IconContext.Provider>
         </div>
 
-        <p className="copyright">&copy; 2024 VMangahis</p>
+        <p className="copyright">&copy; {`${d.getFullYear()}`} VMangahis</p>
 
     </footer>
   )
