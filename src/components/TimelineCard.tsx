@@ -29,7 +29,7 @@ const TimelineCard = ({
           animate={control}
           ref={ref}
         >
-          <section>
+          <section className="experience-card-section">
             <motion.div
               animate={iconControl}
               className={
