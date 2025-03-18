@@ -81,15 +81,6 @@ header li {
   display: none;
 }
 
-.prog-bar {
-  height: 8px;
-  background-color: var(--font-color);
-  position: fixed;
-  top: 125px;
-  z-index: 9999;
-  border-radius: 35px;
-}
-
 .header.scroll {
   background: var(--header-color-blur);
   backdrop-filter: blur(1px);
@@ -310,6 +301,13 @@ header li {
   position: relative;
 }
 
+.experience-card-section {
+  cursor: pointer;
+}
+.experience-card-section {
+  transition: 0.2s linear;
+}
+
 .experience-card section::before {
   position: absolute;
   content: '';
@@ -418,7 +416,8 @@ header li {
 }
 
 .form-control > input:focus,
-.form-control > textarea:focus {
+.form-control > textarea:focus,
+.experience-card-section:hover {
   box-shadow: 0 0 3px 3px var(--font-color);
   transition: 0.2s linear;
 }
@@ -501,76 +500,6 @@ header li {
   border: none;
   outline: none;
 }
-
-/* .web-developer{
-  overflow:hidden;
-  margin:0 auto;
-  display:inline-block;
-  white-space: nowrap;
-  vertical-align: middle;
-  width: max-content;
-  word-break: break-all;
-  position:relative; 
-}
-
-.web-developer::after{
-  position:absolute;
-  
-  
-  background-color: var(--bg-color);
-  content:'';
-  left:0;
-  
-  width:100%;
-  height:100%;
-   animation:
-    typewriter 5s steps(15) infinite forwards,
-
-    blink-caret .4s step-end infinite; 
-    
-} */
-
-/* @keyframes typewriter{
-
-   0%{
-    left:0;
-  }
-  5%{
-    left:0;
-  }
-  30%, 40%, 50%{
-      left:100%;
-    }
-
-  
-
-  90%{
-    left:0;
-  }
-
-  100%{
-    left:0;
-  } 
-
-  40%, 60%{
-    left: 100%;
-  }
-
-  100%{
-    left: 0%;
-  }
-
-}
-
-@keyframes blink-caret{
-  from, to{
-    border-left: 2px solid var(--font-color);
-  }
-
-  50%{
-    border-left: 2px solid transparent;
-  }
-} */
 
 @media (max-width: 1385px) {
   .about-info {
