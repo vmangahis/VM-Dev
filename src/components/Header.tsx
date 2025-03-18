@@ -1,10 +1,11 @@
 import Hamburger from './Hamburger';
 import MobileNav from './MobileNav';
 import logo from '../images/logo.png';
-import useScrollProgress from '../hooks/useScrollProgress';
+import { useHamburgerToggle } from '../hooks/useHamburgerToggle';
+import { useHeaderColor } from '../hooks/useHeaderColor';
 const Header = () => {
-  const { hamburger, scrollY, headerColor, toggleHamburger } =
-    useScrollProgress();
+  const headerColor = useHeaderColor();
+  const { hamburger, setHamburger } = useHamburgerToggle();
 
   return (
     <>
@@ -13,7 +14,7 @@ const Header = () => {
           <img src={logo} />
         </a>
         <MobileNav hamburger_state={hamburger} />
-        <Hamburger toggle={toggleHamburger} hamburger_state={hamburger} />
+        <Hamburger toggle={setHamburger} hamburger_state={hamburger} />
 
         <nav className="navbar">
           <ul>
@@ -43,11 +44,6 @@ const Header = () => {
           </ul>
         </nav>
       </header>
-      <div
-        className="prog-bar"
-        id="pbar"
-        style={{ width: `${scrollY}%` }}
-      ></div>
     </>
   );
 };
