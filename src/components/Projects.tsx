@@ -6,7 +6,9 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const resp = await fetch('https://localhost:7226/api/vm/projects');
+        const resp = await fetch(
+          `${import.meta.env.VITE_API_URL}api/vm/projects`
+        );
         if (!resp.ok) {
           throw new Error('Error!');
         }

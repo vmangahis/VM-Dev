@@ -39,7 +39,9 @@ const Experience = () => {
       });
     };
     const fetchExperiences = async () => {
-      const exp = await fetch('https://localhost:7226/api/vm/experiences');
+      const exp = await fetch(
+        `${import.meta.env.VITE_API_URL}api/vm/experiences`
+      );
       if (!exp.ok) {
         console.log('Error fetching experiences!');
       }
