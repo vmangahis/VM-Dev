@@ -1,10 +1,6 @@
 import { ReactComponent as DevSVG } from '../images/web-dev.svg';
-import Button from './Button';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
-const goToContact = () => {
-  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-};
 
 const About = () => {
   const [typeEffect] = useTypewriter({
@@ -28,12 +24,6 @@ const About = () => {
             </span>
           </p>
         </div>
-
-        <Button
-          button="hero-button"
-          behavior={goToContact}
-          buttonText="Contact me"
-        />
       </span>
 
       <div className="svg-hero">
