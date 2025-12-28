@@ -31,12 +31,6 @@ const MobileNav = ({hamburger_state} : {hamburger_state: boolean}) => {
                 Skills
                 </a>
             </li>
-
-            <li>
-                <a href="#contact">
-                Contact
-                </a>
-            </li>
         </ul>
     </nav>
   )

@@ -37,10 +37,6 @@ const Header = () => {
             <li>
               <a href="#skills">Skills</a>
             </li>
-
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
           </ul>
         </nav>
       </header>
