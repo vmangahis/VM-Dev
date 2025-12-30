@@ -1,10 +1,6 @@
-interface Props {
-  button: string;
-  behavior: () => void;
-  buttonText: string;
-}
+import { ButtonProps } from "../types/portfoliotypes";
 
-const Button = ({ button, behavior, buttonText }: Props) => {
+const Button = ({ button, behavior, buttonText }: ButtonProps) => {
   return (
     <>
       <button className={button} onClick={behavior}>

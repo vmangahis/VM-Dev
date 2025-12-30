@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
 import useTimelinecardAnimation from '../hooks/useTimelineCardAnimation';
+import { TimelineCardProps } from '../types/portfoliotypes';
 
 const TimelineCard = ({
   title,
@@ -9,14 +9,7 @@ const TimelineCard = ({
   company,
   rowType,
   expIcon,
-}: {
-  title: string;
-  st_date: string;
-  ed_date: string;
-  company: string;
-  rowType: string;
-  expIcon: ReactNode;
-}) => {
+}: TimelineCardProps) => {
   const { control, ref, iconControl } = useTimelinecardAnimation(rowType);
 
   return (

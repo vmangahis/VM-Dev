@@ -1,8 +1,9 @@
+import { ProjectTypes } from '../types/portfoliotypes';
 import ProjectCards from './ProjectCards';
 import { useEffect, useState } from 'react';
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<ProjectTypes[]>([]);
   useEffect(() => {
     const fetchProjects = async () => {
       try {

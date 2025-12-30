@@ -2,18 +2,10 @@ import TimelineCard from './TimelineCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import { ExperiencesObject } from '../types/portfoliotypes';
 
 const Experience = () => {
-  type ExperiencesObject = {
-    rowType: string;
-    roleName: string;
-    company: string;
-    st_date: Date;
-    endDate: Date;
-    startDate: Date;
-    st_date_format: string;
-    ed_date_format: string;
-  };
+
 
   let [experiences, setExperiences] = useState<ExperiencesObject[]>([]);
 
