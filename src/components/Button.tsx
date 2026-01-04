@@ -1,4 +1,4 @@
-import { ButtonProps } from "../types/portfoliotypes";
+import { ButtonProps } from "../types/PortfolioTypes";
 
 const Button = ({ button, behavior, buttonText }: ButtonProps) => {
   return (

@@ -1,4 +1,4 @@
-import { ProjectTypes } from '../types/portfoliotypes';
+import { ProjectTypes } from '../types/PortfolioTypes';
 import ProjectCards from './ProjectCards';
 import { useEffect, useState } from 'react';
 

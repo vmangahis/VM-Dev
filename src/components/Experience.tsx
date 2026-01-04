@@ -2,7 +2,7 @@ import TimelineCard from './TimelineCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
-import { ExperiencesObject } from '../types/portfoliotypes';
+import { ExperiencesObject } from '../types/PortfolioTypes';
 
 const Experience = () => {
 

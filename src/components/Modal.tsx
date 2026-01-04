@@ -1,17 +1,14 @@
+import { createPortal } from "react-dom";
+
 function Modal() {
-  return (
+  const rootElement : Element = document.getElementById('root') as Element;
+  return(
+    <>
     <div>
-        <h1>Project Namme</h1>
-        <div className="main-modal-container">
-            <div className="project-image-container">
-                
-            </div>
-            <aside className="project-desc-container">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia doloremque reiciendis soluta distinctio incidunt vel, dolore quis eius molestias nesciunt.
-            </aside>
-        </div>
+      {createPortal(<h1 className="dummyPortal">Working</h1>, rootElement)}
     </div>
-  )
+    </>
+  );
 }
 
 export default Modal;

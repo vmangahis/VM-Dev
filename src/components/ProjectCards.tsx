@@ -1,4 +1,4 @@
-import { ProjectCardsProps } from "../types/portfoliotypes";
+import { ProjectCardsProps } from "../types/PortfolioTypes";
 
 function ProjectCards({ imglink, prname, prlink }: ProjectCardsProps) {
   const defStyle = {

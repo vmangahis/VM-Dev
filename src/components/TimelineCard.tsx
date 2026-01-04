@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import useTimelinecardAnimation from '../hooks/useTimelineCardAnimation';
-import { TimelineCardProps } from '../types/portfoliotypes';
+import { TimelineCardProps } from '../types/PortfolioTypes';
 
 const TimelineCard = ({
   title,
